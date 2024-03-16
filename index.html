@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Head comum-->
+	<title>World of Music</title>
+	<script type="text/javascript" src="js.js"></script>
+	<link rel="stylesheet" type="text/css" href="wom.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="icon" href="imagens/icon.jpg">
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8 /">
+	<style type="text/css">
+
+
+</style>
+</head>
+ <body>
+ 	<div class="loader-wrapper">		
+ 	<span class="loader"><span class="loader-inner"></span>
+ 	
+
+ 	
+ </span>
+ <fieldset class="warning" >
+ 	<legend> &nbsp &nbsp  Este website contem sons  &nbsp &nbsp </legend>
+ 	</fieldset>
+ 	</div>
+ 	<script type="text/javascript">
+ 		var loading= document.getElementsByClassName('loader-wrapper')
+ 		var loader=document.getElementsByClassName('loader')
+ 	</script>
+ 	<!-- scroolbar-->
+ 	<div id="progressbar"></div>
+<div id="scrollPath"></div>
+<script type="text/javascript">
+	
+	window.onscroll= function() {
+		let progress= document.getElementById('progressbar')
+	let totalHeight= document.body.scrollHeight - window.innerHeight;
+		let progressHeight =(window.pageYOffset/ totalHeight) * 100;
+		progress.style.height = progressHeight + "%";	
+	}
+</script>
+<!-- menu e header vai tudo junto-->
+<div class="pag">
+<div id="menu" >
+	
+	<span class="pl" onclick="plingua()"><i class="fa fa-globe" ></i>&nbsp &nbsp  Português</span>
+	<span class="p"></span>
+	<span class="m" onclick="pause()"></span>
+	<a href="#/" ><span class="topico" onclick="topico(0)">Quiz</span></a>
+	<a href="#/" ><span class="topico" onclick="topico(1)">Como Tocar:</span></a>
+	<a href="#/"><span class="topico" onclick="topico(2)">Relação com:</span></a>
+	<a href="#/"><span class="topico" onclick="topico(3)">Basicos da Musica</span></a>
+	<a href="#/"><span class="topico" onclick="topico(4)">Inicio</span></a>
+	<span class="title">World of Music</span>
+	<span class="l"onclick="lingua(0)">  &nbsp &nbsp English</span>
+	<span class="l" style="top:120px;"onclick="lingua(1)"><i class="fa fa-circle" style="font-size: 14px;"></i> &nbsp &nbsp Português</span>
+	
+	</div>
+
+	<script type="text/javascript">
+var pagpiano= document.getElementsByClassName('pagpiano')
+var paguitarra= document.getElementsByClassName('paguitarra')
+var pagbaixo= document.getElementsByClassName('pagbaixo')
+		var body= document.getElementsByTagName('body')
+		function topico(x) {
+			 var topicos= document.getElementsByClassName('topico')
+		var	pag2=document.getElementsByClassName('pag2')
+		var pag3= document.getElementsByClassName('pag3')
+		var pag4= document.getElementsByClassName('pag4')
+		var pag5= document.getElementsByClassName('pag5')
+		
+		for (var i = 0; i<5; i++) {
+			topicos[i].style.borderTop=`none`
+			topicos[i].style.paddingTop=20 + `px`
+		}
+		pag1[0].style.display=`none`
+		pag2[0].style.display=`none`
+		pag3[0].style.display=`none`
+		pag4[0].style.display=`none`
+		pag5[0].style.display=`none`
+		body[0].style.background=` rgb(251,251,251)`
+		imgf[0].innerHTML=`<img class="img3" src="imagens/transicao4.jpg">`
+
+		if (x==4) {
+			pag1[0].style.display=`block`
+			topicos[4].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[4].style.paddingTop=15 + `px`
+
+		}
+		if (x==5) {
+			pag4[0].style.display=`block`
+			topicos[1].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[1].style.paddingTop=15 + `px`
+			body[0].style.background=`  rgb(10,24,31)`
+			
+			pagpiano[0].style.display=`block`
+
+		}
+		if (x==3) {
+			pag2[0].style.display=`block`
+			topicos[3].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[3].style.paddingTop=15 + `px`
+
+		}
+		if (x==2) {
+			pag3[0].style.display=`block`
+			topicos[2].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[2].style.paddingTop=15 + `px`
+		}
+		if (x==1) {
+			pag4[0].style.display=`block`
+			topicos[1].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[1].style.paddingTop=15 + `px`
+			body[0].style.background=`  rgb(10,24,31)`
+			imgf[0].innerHTML=`<img class="img3" src="imagens/transicao5.png">`
+		}
+		if (x==0) {
+			pag5[0].style.display=`block`
+			topicos[0].style.borderTop=`5px solid rgb(10,208,250)`
+			topicos[0].style.paddingTop=15 + `px`
+			
+		}
+		}
+	</script>
+
+	<header >
+	
+	</header>
+	<div class="paginas" style="padding-top: 120px;" id="/">
+	
+
+	<!-- Fim do menu/header-->
+	
+	<div class="pag1" >
+
+		
+<a href="#pauta"><div class="popup" onclick="topico(5)"></div></a>
+
+		<section>
+<div class="caixa2">
+	
+	<div class="caixatexto">
+	<div class="text">
+			<h1>&nbsp &nbsp &nbsp |&nbsp O que é World of Music?</h1> <p></p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | World of Music é um site criado para o concurso <a href="https://www.sitestar.pt/" target="blank">“Site Star”</a> com o objetivo de ensinar música. No site tu podes aprender: os basicos da musica (ler partituras, notas musicais, tempos ritmicos...), a relação da música com muitas disciplinas (matemática, física, história...) e podes aprender ainda a tocar piano/baixo/guitarra podendo praticar num piano/baixo/guitarra virtual. No final ainda pode realizar um quiz para testar o seu conhecimento. Se gostar do site pode avaliá-lo em “Avalie nos” no rodapé do site. <p> </p> &nbsp &nbsp &nbsp    | Para melhorar as nossas capacidades de desenvolvimento de sites decidimos fazer todas as imagens do zero ou adaptar imagens(sem copyright) encontradas na internet e decidimos também fazer o template do site do zero tirando algumas inspirações do <a href="https://www.youtube.com/c/OnlineTutorials4Designers/channels" target="blank">“Online tutorials”</a>. A música de fundo é <a href="https://youtu.be/duWhDWRSWZ8" target="blank">“Long Calming Piano Background (Creative Commons)” do Ds Production</a>( sem copyright).
+<p></p>
+    &nbsp &nbsp &nbsp    |Todos os sons dos instrumentos foram gravados e fornecidos pela nossa parceria <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a>.
+
+
+			
+			</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/icon.jpg" style="margin-top: 45px; width: 90%;margin-left: 5%; max-height: 250px;">
+		</div>
+</div>
+</section>
+
+<div class="ola"></div>
+</div>
+<div class="pag2">
+		<div class="intoducton">
+			<h1  >Basics of Music</h1>
+		</div>
+		
+		<div class="menu3">
+			<span class="ativa" onclick="ativar2(0)">></span>
+			<span class="titulo">&nbsp Topicos</span>
+			<a href="#Notes" ><span>|&nbsp Notas musicais</span></a>
+			<a href="#Rhythmic_Times" ><span>|&nbsp Tempos ritmicos</span></a>
+			<a href="#Music_Sheets" ><span >|&nbsp Leitura de partituras</span></a>
+			<a href="#Sharps_and_Flats" ><span>|&nbsp Sustenidos e bemois</span></a>
+			<a href="#Scales" ><span >|&nbsp Escalas</span></a>
+				
+		</div>
+	
+		<section id="Notes">
+<div class="caixa2">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Notas Musicais</h1> <p></p>
+
+    &nbsp &nbsp &nbsp |  Uma nota musical é um termo usado na música para definir certos sons, ou seja, por outras palavras, as notas musicais são como um alfabeto musical que nos permite associar sons a nomes comuns. Existem 7 notas musicais o Dó(C), Ré(D), Mi(E), Fá(F), Sol(G), Lá(A) e Si(B) (alguns países dão-lhes os nomes c, d, e, f, g, a, b respetivamente). Após o Si volta a vir um Dó e as notas musicais repetem-se novamente.
+    <p></p>
+    &nbsp &nbsp &nbsp |  A grande diferença entre cada nota é a sua frequência. A frequência vai aumentando de nota para nota sendo esta menor no Dó e maior no Si. À diferença de frequência entre duas notas dá-se o nome de tom, ou seja, de uma nota para outra vai sempre aumentar-se um tom com exceção das sequências Mi-Fá e Si-Dó onde aumenta apenas meio tom entre elas.
+    <p></p>
+   &nbsp &nbsp &nbsp |  Como dito anteriormente as notas musicais vão se repetindo de oito em oito notas, assim duas notas iguais de oitavas diferentes (oitava é um conjunto de sete notas musicais seguidas Ex: Dó-Dó, Ré-Ré) vão ter frequências diferentes, ou seja elas vão soar semelhantes, porém uma vai ser mais aguda que a outra.
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/notastone.jpg">
+		</div>
+</div>
+</section>
+<section id="Rhythmic_Times">
+<div class="caixa">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Tempos rítmicos </h1> <p></p>&nbsp;&nbsp;|&nbsp;A duração de cada nota numa música é representada por símbolos (ver imagem) tendo cada símbolo um determinado valor rítmico .Esses símbolos são:a semibreve com o valor de 4 tempos;a mínima com o valor de 2 tempos;a semínima que tem o valor de 1 tempo;
+a colcheia com o valor de 1/2  tempo;a semicolcheia tem o valor de 1/4 de tempo;a fusa com 1/8 de tempo;a semifusa com 1/16 de tempo.
+NOTA: Quando as colcheias e semicolcheias encontram-se mais que umas seguidas podem se juntar sendo representadas conforme mostra a imagem.
+	<p></p>
+	&nbsp;&nbsp;|&nbsp; Como pode ter reparado anteriormente, cada nota tem um valor rítmico diferente porém este é indefinido inicialmente, isto é porque o valor de cada tempo é definido somente no início de cada partitura e este varia de partitura para partitura (ver imagem). O tempo é definido atribuindo um valor (normalmente em BPM-Batimentos por minuto) a um símbolo rítmico( normalmente a semínima). Desta forma uma semínima tanto pode durar 1 segundo como 5 segundos dependendo do que for definido como o valor rítmico.
+	<p></p>
+	</div>
+	<div class="text" >
+		&nbsp;&nbsp;|&nbsp;Outra coisa bastante comum na música para definir tempos rítmicos é a adição de um ponto(.) a um símbolo rítmico. Este ponto serve para adicionar mais metade do valor do símbolo. (Exs: Se o símbolo valesse 4 tempos passaria a valer 6; Se valesse 1 passaria a valer 1,5.)
+	
+	<p></p> 
+	&nbsp;&nbsp;|&nbsp; Na música também existem intervalos de tempo onde não há nenhuma nota a ser tocada. A esse intervalo de tempo dá-se o nome de pausa, e, assim como as notas, existem vários símbolos que representam a duração de cada pausa (ver imagem). Os símbolos são:a pausa semibreve que tem um valor de 4 tempos;a pausa mínima que tem o valor de 2 tempos;a pausa semínima que tem o valor de 1 tempo;a pausa colcheia que tem o valor de 1/2 tempo;a pausa semicolcheia tem o valor de 1/4 de tempo; a pausa fusa com o valor de 1/8 de tempo;a pausa semifusa com o valor de 1/16 de tempo;
+	</div>
+	<div class="caixaimg2">
+		<img  src="imagens/Pausas.jpg">
+		</div>
+
+</div>
+<div class="caixaimg">
+	<img  src="imagens/Tempos_Ritmicos.jpg">
+		</div>
+</div>
+</section>
+<section style="margin-top: 700px;" id="Music_Sheets">
+<div class="caixa2">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Leitura de partituras </h1> <p></p>&nbsp;&nbsp;|&nbsp;  Uma partitura é onde se registam os aspectos rítmicos, harmônicos e melódicos de uma música. Para poder ler uma partitura é necessário saber como se representam os tempos das notas, o que são as claves musicais e como se representam as notas nas pautas. Uma vez que já vimos como se representam os tempos das notas anteriormente vamos começar por ver como se representam as notas musicais nas pautas.
+	<p></p> 
+	&nbsp;&nbsp;|&nbsp; Primeiro de tudo vamos ver o que é que é uma pauta.
+ Uma pauta é uma região na partitura formada por linhas e espaços. Cada linha e cada espaço são usados para representar uma nota musical diferente como mostra a imagem. Inicialmente só existem 5 linhas, mas é possível adicionar mais linhas traçando um traço no meio da nota. As notas vão ficando mais agudas quanto mais altas estiverem.
+	<p></p>
+	&nbsp;&nbsp;|&nbsp;  Agora vamos ver o que é uma Clave. Uma Clave é um símbolo que aparece no início de cada pauta e serve para sinalizar as notas e as linhas de referência adotadas. As três Claves mais comuns são a de Sol a de Fá, ainda que se vejam bastantes de Dó. A Clave de Sol indica que a segunda linha a contar de baixo para cima é o Sol da 4 oitava de um piano. Já a de Fá indica que a segunda linha a contar de cima para baixo é o Fá da terceira oitava de um piano. Por último, a Clave de Dó indica que a terceira linha é o dó central (dó da quarta oitava de um piano).
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/partitura.jpg">
+		</div>
+</div>
+</section>
+<section id="Sharps_and_Flats">
+<div class="caixa">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Sustenidos e bemois </h1> <p></p>&nbsp;|&nbsp;   Como mencionado anteriormente, de uma nota musical para a outra vai sempre variar um tom com a exceção do Mi-Fá e de Si-Dó onde varia apenas meio tom entre elas, no entanto, para além das notas musicais dó, ré, mi, fá, sol, lá, si,  existem notas musicais intermédias entre estas, em que a diferença de tons entre uma e outra é de meio tom, ou seja, entre duas notas como por exemplo Dó e o Ré, vai existir uma nota que é meio tom superior a Dó e meio tom inferior a Ré (Isto acontece para todas as notas com a exceção de Mi-Fá e de Si-Dó). A estas notas dá-se o nome de sustenidos e bemóis.
+	<p></p>
+	&nbsp;|&nbsp; Mas então qual é a diferença entre sustenido e bemol? Bem o sustenido(#) usa-se quando se quer indicar que a nota referida é meio tom superior à nota base (por exemplo Dó sustenido vai ser meio tom superior a Dó, ou seja vai ser a nota entre dó e ré). Já os bemóis são usados para indicar que a nota referida é meio tom inferior à nota base (por exemplo Ré bemol é meio tom inferior a Ré, ou seja vai ser a nota entre dó e ré).
+	<p></p>
+	&nbsp;|&nbsp; Nas pautas os sustenidos e os bemóis são representados pelos símbolos (#) e (♭) respetivamente, podendo ser representados antes de uma nota ou logo no início da pauta. Se for apresentado no início da pauta, aqueles sustenidos e bemóis estão a ser definidos para a música toda, ou seja se no início da pauta tiver um sustenido no Lá, então todos os Lás da música serão Lás sustenidos, ou seja, é definida uma escala. Para retirar o valor de sustenido ou de bemol de uma nota usa-se o bequadro antes da nota a qual se quer tirar o valor. 
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/bemol2.jpg">
+		</div>
+</div>
+</section>
+<section id="Scales">
+<div class="caixa2">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Escalas Musicais</h1> <p></p>&nbsp &nbsp |&nbsp Uma escala musical é uma sequência ordenada de notas musicais que se repetem em ciclo Ex:dó, ré, mi, fá, sol, lá, si, dó, nesta escala começou-se com a nota dó e seguiu-se uma sequencia de Tom, Semitom, Tom, Tom, Semitom, Tom, Tom  até chegar outra vez ao dó. Para cada nota musical existe uma escala básica podendo esta ser uma escala maior ou uma menor.
+Numa escala Maior a sequência é: Tom, Tom, Semitom, Tom, Tom, Tom, Semitom (a sequência começa e acaba sempre na respetiva nota da escala EX: Dó maior a sequencia vai começar e acabar no Dó).
+Por sua vez, numa Escala Menor a sequência é: Tom, Semitom, Tom, Tom, Semitom, Tom, Tom.
+<p></p>
+ &nbsp &nbsp &nbsp |&nbsp Outra forma de caracterizar as escalas é pelos seus sustenidos e bemóis. 
+A ordem dos sustenidos é: Fá#; Dó#; Sol#; Ré#; Lá#; Mi#; SI#. enquanto a dos bemóis é exatamente a contrária: Si♭; Mi♭; Lá♭; Ré♭; Sol♭; Dó♭; Fá♭. Para calcular uma escala pelos seus sustenidos reduz-se meio tom à tônica da escala e saberemos qual o último sustenido da ordem (Por exemplo na escala de Lá maior, ao diminuir meio tom teremos o Sol#. Assim a escala de Lá Maior utilizará os sustenidos até ao Sol#: Lá, Si, Dó#, Ré, Mi, Fá#, Sol#, Lá.). Já no caso dos bemóis, o penúltimo bemol vai indicar o tom maior (No caso da escala de lá bemol maior o penúltimo bemol será exatamente o próprio lá bemol, então ao ir à ordem dos bemóis encontramos o Lá♭ e vemos qual é a próxima nota, ou seja, a escala de Lá bemol Maior será: Lá♭, Si♭, Dó, Ré♭, Mi♭, Fá, Sol, Lá♭.).
+
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/escalatone.jpg">
+		</div>
+</div>
+</section>
+
+</div>
+<div class="pag3">
+	<div class="intoducton">
+			<h1  >Basics of Music</h1>
+		</div>
+		
+			<div class="menu3">
+			<span class="ativa" onclick="ativar2(1)">></span>
+			<span class="titulo">&nbsp Topicos</span>
+			<a href="#Fisics" ><span>|&nbsp Fisica</span></a>
+			<a href="#History" ><span>|&nbsp Historia</span></a>
+			<a href="#Mathematics" ><span >|&nbsp Matematica</span></a>
+			<a href="#Literature" ><span>|&nbsp Literatura</span></a>
+				
+		</div>
+	<section id="Fisics">
+	<div class="caixa2">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Fisica</h1> <p></p><p></p><p></p>
+    &nbsp &nbsp &nbsp | A física relaciona-se com a música através da frequência. Como já referimos no site o que define uma nota é a sua frequência, ou seja, cada nota têm uma frequência diferente uma da outra, e a frequência de uma nota é que lhe dá o seu som característico (A nota lá, por exemplo, corresponde a uma frequência de 440 Hz.).  Quanto maior for a frequência de uma nota mais aguda esta vai ser e quanto menor for a frequência mais grave esta vai ser.
+<p></p><p></p><p></p><p></p>
+&nbsp &nbsp &nbsp | Mas então o que é a frequência e como é que isso define um som? Bem a frequência é uma repetição com referência de tempo, ou seja, é algo que acontece de x em x tempo. Por exemplo, se uma roda de uma bicicleta der uma volta em 1 segundo então a sua frequência vai ser uma volta por segundo (ou um Htz). O som por sua vez é uma onda invisível que oscila(Contrai-se e descontrai-se de maneira a movimentar-se), assim se uma nota oscilar 5 vezes por segundo então ela vai ter uma frequência de 5Hz. Como o ouvido humano destingue os sons pelas suas oscilações, ou seja, pela sua frequência então a frequência de cada nota é o que lhe vai dar o seu som caracteristico.
+<p></p><p></p><p></p>
+	</div>
+</div>
+<div class="caixaimg">
+<img  src="imagens/fisitones.jpg">
+		</div>
+</div>
+</section>
+<section id="History">
+<div class="caixa">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Historia e cultura das artes </h1> <p></p>&nbsp;&nbsp; &nbsp;| Ao longo da história do homem, existiram várias épocas e culturas diferentes que tiveram controle na música. As épocas mais famosas, são, a época do clássico,  a época do romantismo, a época do estilo barroco e a época renascentista. No entanto, da mesma forma que existiram essas épocas e culturas diferentes, existiram muitas mais épocas/culturas com altíssima influência na música . Nomeadamente, a cultura egípcia e asiática, e a nossa época atual. Ao comparar as várias épocas, ainda que as suas bases sejam as mesmas, as diferenças são extremamente significativas.
+E, assim como referido anteriormente, existem muitas figuras importantes na história que estiveram fortemente ligadas à música. É praticamente cultura geral conhecer Beethoven e Mozart dos clássicos e barroco, ou conhecer Drake, hoje em dia.<p></p>  
+&nbsp &nbsp &nbsp |&nbsp Falando sobre Beethoven, um dos mais famosos músicos, que para além de pianista e compositor era surdo, o que dificultava em muito a sua vida, mas  que para além das suas dificuldades tornou-se  uma grande inspiração para vários músicos futuros . Um homem que, apesar de não ter o sentido que mais necessitamos, mostrou que é possível estar ligado à música e criar obras que jamais serão esquecidas.  Beethoven  tem também das mais importantes obras musicais, extremamente conhecidas, como a 5ª e 9ª  sinfonia, assim como a famosa Für Elize e a sua 14ª Sonata, mundialmente conhecida como “Moonlight Sonata”
+	</div>
+	<div class="text" >
+		&nbsp;&nbsp;|&nbsp; Da mesma forma, muitos outros compositores tiveram a sua influência neste mundo magnífico que é a música, como  Frédéric Chopin que levou o virtuosismo a outro nível, e Franz Liszt que para além de criar o poema sinfónico, deixou uma extensa quantidade de obras a serem estudadas, muitas delas consideradas extremamente difíceis, como a conhecida La Campanela e a Hungarian Rhapsody no.2.
+		<p></p>
+ &nbsp;&nbsp;|&nbsp; Mas nunca devemos esquecer aqueles que tinham grandes talentos e que passaram despercebidos por falta de recursos e/ou opressão. Para além disso, devemos sempre recordar as grandes figuras que se relacionam com a música. Leonardo da Vinci, por exemplo, foi alguém que, para além de se envolver com a música ao cantar e tocar, tendo este aprendido sem qualquer tipo de professor, também promoveu a música ao escrever ensaios e reflexões sobre música, além de projetar e construir protótipos de instrumentos musicais.  Outra pessoa bastante importante à música, foi Pitágoras, que será falado mais à frente.
+
+	</div>
+	<div class="caixaimg2">
+		<img  src="imagens/toninho_da_vinci.jpg">
+		</div>
+
+</div>
+<div class="caixaimg">
+	<img  src="imagens/Bethoninho.jpg">
+		</div>
+</div>
+</section>
+<section style="margin-top: 800px;" id="Mathematics">
+<div class="caixa2">
+	<div class="caixatexto">
+	<div class="text">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Matematica </h1> <p></p>&nbsp;&nbsp;|&nbsp;  A matemática relaciona-se com a música através de Pitágoras. Pitágoras foi um filósofo e matemático grego que entre as suas imensas descobertas descobriu como produzir notas musicais em instrumentos a partir da matemática. Pitágoras descobriu que se multiplicarmos a frequência de uma nota musical por 2 o som obtido será a mesma nota, porém de uma oitava acima (ou seja mais aguada).
+	<p></p> 
+	&nbsp;&nbsp;|&nbsp; Pitágoras descobriu isso a partir de uma corda esticada, ele apercebeu-se que ao fazer a corda vibrar esta produzia um som e apercebeu-se também que ao dobrar a corda esta ia produzindo sons diferentes, ao dobrar as cordas várias vezes Pitágoras descobriu vários padrões, ele apercebeu-se que se dobrasse a corda em metade  o som obtido seria a mesma nota que a anterior, porém mais agudo e ao dobrá-la em 3 apercebeu-se que a nota obtida era diferente da inicial, porém esta soava bem juntamente com as anteriores. Assim, Pitágoras continuou a fazer divisões e criando combinações matemáticas originando assim as escalas musicais. Mais tarde Pitágoras também criaria instrumentos que pudessem reproduzir essas escalas. 
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/matematone.jpg">
+		</div>
+</div>
+</section>
+<section id="Literature">
+<div class="caixa">
+	<div class="caixatexto">
+	<div class="text" style="min-height: 450px;">
+		<h1>&nbsp &nbsp &nbsp |&nbsp Literatura </h1> <p></p>&nbsp;|&nbsp;   Não é fácil imaginar de que forma a literatura se pode comparar com a música. Apesar de ambas serem formas de entretenimento, são bastante distintas, o que pode resultar numa ideia de que ambas não se podem combinar.
+		<p></p> &nbsp;|&nbsp;  Mas claramente isso não é verdade! A obra mais importante de Pessoa (a famosa "Mensagem") inspirou diversos fados modernos, mesmo que sejam cantados centenas de anos depois, por exemplo, a bela música do grupo galego Milladoiro, “O Mar Português”. 
+		<p></p> &nbsp;|&nbsp; Outro bom exemplo, são os momentos dos Salmos, nas missas católicas, e a ópera, São textos cantados, apenas com a voz humana, mas que representam a pura conexão entre a música e a literatura. Para além disso, se pensarmos bem, a música atual, que deixou os padrões de música apenas instrumental (época clássica) e passou a juntar a voz humana, é uma grande forma de conexão com a literatura, já que tudo o que é cantado com uma música de fundo é na verdade uma obra de literatura, com o seu significado e/ou mensagem ao ouvinte, que antes era compreendida apenas por outros músicos e especialistas, e agora se tornou muito mais fácil de se entender. 
+
+	</div>
+</div>
+<div class="caixaimg">
+	<img  src="imagens/literatone.jpg">
+		</div>
+</div>
+</section>
+</div>
+
+<script type="text/javascript">
+	var menu3=document.getElementsByClassName('menu3')
+	function ativar2(x) {
+		if(x==0){
+			let act=document.getElementsByClassName('ativa')
+			if (menu3[0].style.right==0||menu3[0].style.right==0+`px`) {
+
+			menu3[0].style.right=-210+`px`
+			
+			act[0].innerHTML=`<`
+			
+			act[0].style.width=115+`%`
+		}else{
+			act[0].style.right=0+`px`
+			menu3[0].style.right=0+`px`
+			act[0].innerHTML=`>`
+			
+			act[0].style.width=75+`%`
+		}
+		}
+		if(x==1){
+			let act=document.getElementsByClassName('ativa')
+			if (menu3[1].style.right==0||menu3[1].style.right==0+`px`) {
+
+			menu3[1].style.right=-210+`px`
+			
+			act[1].innerHTML=`<`
+			
+			act[1].style.width=115+`%`
+		}else{
+			act[1].style.right=0+`px`
+			menu3[1].style.right=0+`px`
+			act[1].innerHTML=`>`
+			
+			act[1].style.width=75+`%`
+		}
+		}
+		
+	}
+
+	
+</script>
+<div class="pag4">
+	<div class="intoducton">
+			<h1 style="">How to play</h1>
+		</div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+<div class="container">
+	
+ <a href="#pian"><div class="division">
+	<div class="box" onclick="pag(0)" >
+		
+				<div class="content">
+			<h3 style="font-weight: bold;">|&nbsp Piano </h3>
+			<h2><img src="imagens/piano.jpg"></h2>
+			
+			<p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos do piano e pratique num piano virtual. Nota: Antes de aprender a tocar piano deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica.
+
+				
+			  </p>
+		
+
+	</div>
+	</div>
+</div></a>
+<a href="#Guittar"><div class="division">
+	<div class="box" onclick="pag(1)">
+
+		<div class="content" >
+			<h3 style="font-weight: bold;">|&nbsp Guitarra</h3>
+			<h2><img src="imagens/guitarra.jpg" ></h2>
+			
+			<p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos da guitarra e pratique numa guitarra virtual. Nota: Antes de aprender a tocar guitarra deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica. </p>
+		</div>
+	</div>
+</div></a>
+	<a href="#Bass"><div class="division"onclick="pag(2)">
+	<div class="box">
+		<div class="content">
+			<h3 style="font-weight: bold;">|&nbsp Baixo</h3>
+			<h2><img src="imagens/baixo_1.png"></h2>
+			
+			<p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos do baixo e pratique num baixo virtual. Nota: Antes de aprender a tocar baixo deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica.</p>
+		</div>
+	</div>
+	</div></a>
+		
+</div>
+
+<div class="pagpiano" id="pian">
+
+	<div class="intoducton">
+			<h1 style="">Piano</h1>
+		</div>
+	<div class="content">
+
+		<div class="caixa">
+
+			<div class="caixatexto">
+				
+				<fieldset style=" height:320px; border: none;"class="textb">
+					<h1>&nbsp &nbsp &nbsp |&nbsp Piano</h1>
+					
+					<p></p>
+					&nbsp &nbsp &nbsp |&nbsp  Um piano é constituido por 7 oitavas sendo as teclas brancas do piano  as notas basicas e as teclas pretas os sustenidos/bemois. Num piano as notas sobem da esquerda para a direita assim as notas são  mais graves nas oitavas mais a esquerda e mais agudas nas oitavas mais a direita. No piano o dó destingue-se das outras notas por ser a tecla antes de duas teclas pretas(nota a azul na imagem).
+				</fieldset>
+			</div>
+			<div class="caixaimg" style="background: url(imagens/piano2.jpg) no-repeat;background-size: auto 90%;background-position: center; background-color: rgba(21,21,21,0.95);">
+				
+			</div>
+		</div>
+		<div class="caixa2">
+
+			<div class="caixatexto">
+				
+				<fieldset style=" height:320px; border: none;" class="textb">
+					<h1> |&nbsp Pedais/ Piano virtual</h1>
+					<p></p>
+					&nbsp &nbsp &nbsp |&nbsp Um piano é constituido por três pedais tendo estes 3 funções diferentes, o pedal esquerdo( Una corda) deixa o som mais suave,o pedal direito prelonga o som e o pedal central(sostenuto) abafa o som.
+					<p></p> 
+					&nbsp &nbsp &nbsp |&nbsp No piano virtual toque cliando nas tocas desejadas ou (se estiver num computador) use as respetivas teclas do teclado. O piano virtual é constituido por duas oitavas sendo estas as duas oitavas centrais de um piano.
+				</fieldset>
+			</div>
+			<div class="caixaimg"  style="background: url(imagens/pedais.jpg) no-repeat;background-size: auto 90%;background-position: center; background-color: rgba(21,21,21,0.95);"></div>
+		</div>
+	</div>
+	<div style="margin-bottom:0px;display: block; background:rgb(251,251,251);padding-top: 50px; padding-bottom: 100px;">
+
+	<div class="pauta" id="pauta">
+		<span class="notaspan"style="margin-top: 40px;" >&#9679;</span>
+		<span class="notaspan"style="margin-top: 46px;">&#9679;</span>
+		<span class="notaspan"style="margin-top: 53px;"><a>&#9839;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 53px;">&#9679;</span>
+		<span class="notaspan"style="margin-top: 59px;"><a>&#9839;</a>&#9679;</span>
+		<span class="notaspan"style="margin-top: 59px;">&#9679;</span>
+		<span class="notaspan"style="margin-top: 66px;"><a>&#9839;</a>&#9679;</span>
+		<span class="notaspan"style="margin-top: 66px;">&#9679;</span>
+		<span class="notaspan"style="margin-top: 72px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 78px;"><a>&#9839;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 78px;">&#9679;</span>
+		<span class="notaspan"style="margin-top: 111px;"><a>&#9839;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 112px;">&#9679;</span>
+		<span class="notaspan" style="margin-top: 141px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 141px;"><a>&#9837;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 146px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 146px;"><a>&#9837;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 152px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 152px;"><a>&#9837;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 157px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 164px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 164px;"><a>&#9837;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 172px;"> &#9679;</span>
+		<span class="notaspan"style="margin-top: 172px;"><a>&#9837;</a> &#9679;</span>
+		<span class="notaspan"style="margin-top: 178px;"> &#9679;</span>
+		
+	</div>
+
+
+<button id="tira">Esconder / Hide</button>
+
+	<div id="piano">
+
+	<button  class="white"onmousedown=" nota(0)" onmouseup=" volta(0)"onmouseout="volta(0)" ontouchstart=" nota(0)" ontouchend="volta(0)">do<p>(a)</p></button>
+	<button class="white"onmousedown="nota(1)"onmouseup="volta(1)"onmouseout="volta(1)" ontouchstart=" nota(1)" ontouchend="volta(1)">re<p>(s)</p></button>
+	<button class="white"onmousedown="nota(2)"onmouseup="volta(2)"onmouseout="volta(2)" ontouchstart=" nota(2)" ontouchend="volta(2)">mi<p>(q)</p></button>
+	<button class="white" onmousedown="nota(3)"onmouseup="volta(3)"onmouseout="volta(3)" ontouchstart=" nota(3)" ontouchend="volta(3)">fa<p>(w)</p></button>
+	<button class="white"onmousedown="nota(4)"onmouseup=" volta(4)"onmouseout="volta(4)" ontouchstart=" nota(4)" ontouchend="volta(4)">sol<p>(e)</p></button>
+	<button class="white" onmousedown="nota(5)"onmouseup=" volta(5)"onmouseout="volta(5)" ontouchstart=" nota(5)" ontouchend="volta(5)">la<p>(r)</p></button>
+	<button class="white" onmousedown="nota(6)"onmouseup=" volta(6)"onmouseout="volta(6)" ontouchstart=" nota(6)" ontouchend="volta(6)">si<p>(t)</p></button>
+	<button class="white" onmousedown="nota(7)"onmouseup=" volta(7)"onmouseout="volta(7)"ontouchstart=" nota(7)" ontouchend="volta(7)" >do<p>(y)</p></button>
+	<button  class="white"onmousedown=" nota(8)" onmouseup=" volta(8)"onmouseout="volta(8)" ontouchstart=" nota(8)" ontouchend="volta(8)">re<p>(u)</p></button>
+	<button class="white"onmousedown="nota(9)"onmouseup="volta(9)"onmouseout="volta(9)" ontouchstart=" nota(9)" ontouchend="volta(9)">mi<p>(i)</p></button>
+	<button class="white"onmousedown="nota(10)"onmouseup="volta(10)"onmouseout="volta(10)" ontouchstart=" nota(10)" ontouchend="volta(10)">fa<p>(o)</p></button>
+	<button class="white" onmousedown="nota(11)"onmouseup="volta(11)"onmouseout="volta(11)" ontouchstart=" nota(11)" ontouchend="volta(11)">sol<p>(p)</p></button>
+	<button class="white"onmousedown="nota(12)"onmouseup=" volta(12)"onmouseout="volta(12)" ontouchstart=" nota(12)" ontouchend="volta(12)">la<p>(j)</p></button>
+	<button class="white" onmousedown="nota(13)"onmouseup=" volta(13)"onmouseout="volta(13)" ontouchstart=" nota(13)" ontouchend="volta(13)">si<p>(k)</p></button>
+	<button class="white" onmousedown="nota(14)"onmouseup=" volta(14)"onmouseout="volta(14)"ontouchstart=" nota(14)" ontouchend="volta(14)" >do<p>(l)</p></button>
+	<button class="black1"onmousedown="nota(15)"onmouseup="volta(15)"onmouseout="volta(15)" ontouchstart=" nota(15)" ontouchend="volta(15)">#do<p>(1)</p></button>
+	<button class="black1"onmousedown="nota(16)"onmouseup="volta(16)"onmouseout="volta(16)" ontouchstart=" nota(16)" ontouchend="volta(16)">#re<p>(2)</p></button>
+	<button class="black2"onmousedown="nota(17)"onmouseup="volta(17)"onmouseout="volta(17)" ontouchstart=" nota(17)" ontouchend="volta(17)">#fa<p>(3)</p></button>
+	<button class="black2"onmousedown="nota(18)"onmouseup="volta(18)"onmouseout="volta(18)" ontouchstart=" nota(18)" ontouchend="volta(18)">#sol<p>(4)</p></button>
+	<button class="black2"onmousedown="nota(19)"onmouseup=" volta(19)"onmouseout="volta(19)" ontouchstart=" nota(19)" ontouchend="volta(19)">#la<p>(5)</p></button>
+	<button class="black3" onmousedown="nota(20)"onmouseup="volta(20)"onmouseout="volta(20)" ontouchstart=" nota(20)" ontouchend="volta(20)">#do<p>(6)</p></button>
+	<button class="black3"onmousedown="nota(21)"onmouseup="volta(21)"onmouseout="volta(21)" ontouchstart=" nota(21)" ontouchend="volta(21)">#Re<p>(7)</p></button>
+	<button class="black4"onmousedown="nota(22)"onmouseup="volta(22)"onmouseout="volta(22)" ontouchstart=" nota(22)" ontouchend="volta(22)">#fa<p>(8)</p></button>
+	<button class="black4"onmousedown="nota(23)"onmouseup="volta(23)"onmouseout="volta(23)" ontouchstart=" nota(23)" ontouchend="volta(23)">#sol<p>(9)</p></button>
+	<button class="black4"onmousedown="nota(24)"onmouseup="volta(24)"onmouseout="volta(24)" ontouchstart=" nota(24)" ontouchend="volta(24)">#la<p>(0)</p></button>
+	</div>
+	</div>
+	<script type="text/javascript">
+		var ns= document.getElementsByClassName('notaspan')
+		   document.addEventListener('keydown', nota2)
+		   document.addEventListener('keyup', volta2)
+		   var notasw= document.getElementsByClassName('white')
+		   var notasb1= document.getElementsByClassName('black1')
+		   var notasb2= document.getElementsByClassName('black2')
+		   var notasb3= document.getElementsByClassName('black3')
+		   var notasb4= document.getElementsByClassName('black4')
+		   var d = new Audio('media/01_bip.mp3');
+		   console.log(d)
+		   var re = new Audio('media/03_bip.mp3');
+		   var mi = new Audio('media/05_bip.mp3');
+		   var fa = new Audio('media/06_bip.mp3');
+		   var sol = new Audio('media/08_bip.mp3');
+		   var la = new Audio('media/10_bip.mp3');
+		   var si = new Audio('media/12_bip.mp3');
+		   var d2 = new Audio('media/13_bip.mp3');
+		   var re2 = new Audio('media/15_bip.mp3');
+		   var mi2 = new Audio('media/17_bip.mp3');
+		   var fa2 = new Audio('media/18_bip.mp3');
+		   var sol2 = new Audio('media/20_bip.mp3');
+		   var la2 = new Audio('media/22_bip.mp3');
+		   var si2 = new Audio('media/24_bip.mp3');
+		   var d3 = new Audio('media/25_bip.mp3');
+		   var ds = new Audio('media/02_bip.mp3');
+		   var res = new Audio('media/04_bip.mp3');
+		   var fas = new Audio('media/07_bip.mp3');
+		   var sols = new Audio('media/09_bip.mp3');
+		   var sis = new Audio('media/11_bip.mp3');
+		   var ds2 = new Audio('media/14_bip.mp3');
+		   var res2 = new Audio('media/16_bip.mp3');
+		   var fas2 = new Audio('media/19_bip.mp3');
+		   var sols2 = new Audio('media/21_bip.mp3');
+		   var sis2 = new Audio('media/23_bip.mp3');
+var notas=[d,re,mi,fa,sol,la,si,d2,re2,mi2,fa2,sol2,la2,si2,d3,ds,res,fas,sols,sis,ds2,res2,fas2,sols2,sis2]
+var notas2={a:d,s:re,q:mi,w:fa,e:sol,r:la,t:si,y:d2,u:re2,i:mi2,o:fa2,p:sol2,j:la2,k:si2,l:d3}
+var notas3=['do','re','mi','fa','sol','la','si','do','#do','#re','#fa','#sol','#la']
+var notas4=['a','s','q','w','e','r','t','y','u','i','o','p','j','k','l','1','2','3','4','5','6','7','8','9','0']
+ var notas5=[ns[24],ns[22],ns[20],ns[19],ns[17],ns[15],ns[13],ns[12],ns[10],ns[8],ns[7],ns[5],ns[3],ns[1],ns[0],   ns[23],ns[21],ns[18],ns[16],ns[14],ns[11],ns[9],ns[6],ns[4],ns[2]]
+		function nota(n) {
+			var p=notas[n]
+			let	e=notas5[n]
+			e.style.color=`rgb(13,208,250)`
+			console.log(p)
+			p.play()
+			if (n<=14) {
+						notasw[n].style.background=`#969696`	
+						notasw[n].style.top=`7px`		
+			}else if(n>14 && n<=16){
+						notasb1[n-15].style.background=`#969696`								
+			}else if (n>16 && n<=19) {
+						notasb2[n-17].style.background=`#969696`					
+			}else if (n>19 && n<=21){
+			   			notasb3[n-20].style.background=`#969696`		   			
+			}else{
+						notasb4[n-22].style.background=`#969696`			
+		}
+	}
+		function volta(n) {
+			var p=notas[n]
+			p.pause()
+			p.load()
+			let	e=notas5[n]
+			e.style.color=`black`
+			if (n<=14) {
+						notasw[n].style.background=`white`	
+						notasw[n].style.top=`0px`			
+			}else if(n>14 && n<=16){
+			notasb1[n-15].style.background=`black`
+			}else if (n>16 && n<=19) {
+						notasb2[n-17].style.background=`black`
+		}else if (n>19 && n<=21){
+			   			notasb3[n-20].style.background=`black`
+		}else{
+						notasb4[n-22].style.background=`black`		
+		}}
+		function nota2(evt) {
+			console.log()
+			if (notasw[0].clientWidth>0) {
+			if (evt.keyCode>58) {
+			 var p= notas2[evt.key]
+			p.play()
+			var n=notas.indexOf(p)
+			let	e=notas5[n]
+			e.style.color=`rgb(13,208,250)`
+			notasw[n].style.background=`#969696`
+			notasw[n].style.top=`7px`
+		}else if(evt.keyCode<58 &&evt.keyCode>48 ){
+			n= evt.keyCode-34
+			var p=notas[n]
+			p.play()		
+			let	e=notas5[n]
+			e.style.color=`rgb(13,208,250)`
+			 if(n>14 && n<=16){
+						notasb1[n-15].style.background=`#969696`								
+			}else if (n>16 && n<=19) {
+						notasb2[n-17].style.background=`#969696`					
+			}else if (n>19 && n<=21){
+			   			notasb3[n-20].style.background=`#969696`			   			
+			}else if(n>21 && n<=23){
+						notasb4[n-22].style.background=`#969696`				
+			}						
+		}else if(evt.keyCode==48){
+			sis2.play()
+			notasb4[2].style.background=`#969696`	
+			let	e=notas5[24]
+			e.style.color=`rgb(13,208,250)`
+		}
+		}}
+		function volta2(ev) {
+			if (ev.keyCode>58) {
+			 var p= notas2[ev.key]
+			p.pause()
+			p.load()
+			var n=notas.indexOf(p)
+			let	e=notas5[n]
+			e.style.color=`black`
+			notasw[n].style.background=`white`
+			notasw[n].style.top=`0px`
+		}else if(ev.keyCode<58 &&ev.keyCode>48 ){
+			n= ev.keyCode-34
+			var p=notas[n]
+			p.pause()
+			p.load()
+			let	e=notas5[n]
+			e.style.color=`black`	
+			 if(n>14 && n<=16){
+						notasb1[n-15].style.background=`black`								
+			}else if (n>16 && n<=19) {
+						notasb2[n-17].style.background=`black`					
+			}else if (n>19 && n<=21){
+			   			notasb3[n-20].style.background=`black`			   			
+			}else if(n>21 && n<=23){
+						notasb4[n-22].style.background=`black`				
+			}						
+		}else if(ev.keyCode==48){
+			sis2.pause()
+			sis2.load()
+			notasb4[2].style.background=`black`	
+			let	e=notas5[24]
+			e.style.color=`black`
+		}
+	}
+	var tira= document.getElementById('tira')
+	tira.addEventListener('click', tirar)
+	
+	var swich=0
+	function tirar(n) {
+
+		let v= (swich+1)%2
+		  swich=v
+		 console.log(v)
+if (v==1){
+ 
+		for(i=0;i<15;i++){
+			notasw[i].innerHTML=''	
+		}
+	for(i=0;i<2;i++){
+		notasb1[i].innerHTML=''	
+		notasb3[i].innerHTML=''
+	}
+	for(i=0;i<3;i++){
+		notasb2[i].innerHTML=''
+		notasb4[i].innerHTML=''
+		}
+		tira.innerHTML='Mostrar / Show'
+}else{
+	
+	for(e=0;e<8;e++){
+    var d= notas3[e]
+    let f= notas4[e]
+    let g = notas4[e+7]
+	notasw[e].innerHTML= d+'<p>('+f+')</p>'
+	notasw[e+7].innerHTML= d+'<p>('+g+')</p>'
+}
+	for(e=0;e<2;e++){
+	var d= notas3[e+8]
+    let f= notas4[e+15]
+    let g= notas4[e+20]
+	notasb1[e].innerHTML= d+'<p>('+f+')</p>'
+	notasb3[e].innerHTML= d+'<p>('+g+')</p>'
+	}
+	for(e=0;e<3;e++){
+	var d= notas3[e+10]
+    let f= notas4[e+17]
+    let g= notas4[e+22]
+	notasb2[e].innerHTML= d+'<p>('+f+')</p>'
+	notasb4[e].innerHTML= d+'<p>('+g+')</p>'
+}
+
+tira.innerHTML='Esconder / Hide'
+}}
+	</script>
+	</div>
+
+<div class="paguitarra">
+	<div class="intoducton">
+			<h1 style="" id="Guittar">Guitarra</h1>
+		</div>
+	<div class="content">
+		
+
+		<div class="caixa">
+
+			<div class="caixatexto">
+				
+				<fieldset style=" height:320px; border: none;" class="textb">
+					<h1>&nbsp &nbsp &nbsp |&nbsp Guitarra</h1>
+					
+					<p></p>
+					&nbsp &nbsp &nbsp |&nbsp A guitarra clássica é constituída por 2 partes, o braço e o corpo, sendo o braço dividido em outras duas partes, a cabeça e a escala. O braço, é composto por  6 cordas, por 6 cravelhas, para afinar cada corda, e por 20 espaços denominados de trastos (Frets em inglês), os quais são divididos por pequenas barras metálicas entre eles. O corpo, por sua vez, é maioritariamente constituído pela abertura, onde geralmente é tocada a música, e o rastilho e cavalete. Em suma, o braço é a parte do “o que tocar” enquanto o corpo é o “onde tocar”.
+				</fieldset>
+			</div>
+			<div class="caixaimg" style="background: url(imagens/guitarra2.jpg) no-repeat;background-size: auto 90%;background-position: center; background-color: rgba(21,21,21,0.95);">
+				
+			</div>
+		</div>
+		<div class="caixa2">
+
+			<div class="caixatexto">
+				
+				<fieldset style=" height:320px; border: none;"class="textb">
+					<h1> |&nbsp Como tocar:</h1>
+					&nbsp &nbsp &nbsp |&nbsp Enquanto no braço nós escolhemos a nota a tocar, ou o acorde a tocar, ao colocar os dedos em locais específicos, assim como será possível verificar em baixo, onde poderá escolher o acorde a tocar, que irá ser representado na nossa guitarra virtual, no corpo é onde o músico toca as cordas, seja um toque direto com os dedos, ou com palhetas, que facilita quando o tempo que o músico estará a tocar é grande. 
+
+
+				</fieldset>
+			</div>
+			<div class="caixaimg"style="background: url(imagens/guitarra2.png) no-repeat;background-size: auto 78%;background-position: center; background-color: rgba(21,21,21,0.95);" ></div>
+		</div>
+	</div>
+	
+	<div style="width: 100%; background: rgb(251,251,251); padding-top: 150px; padding-bottom: 100px; ">
+
+		<div style="width: 100%;min-height:100px;">
+			<span class="acordes" onclick="acorde(0)">Lá Maior</span>
+			<span class="acordes" onclick="acorde(1)">Lá Menor</span>
+			<span class="acordes"  onclick="acorde(2)">Si Maior</span>
+			<span class="acordes"  onclick="acorde(3)">Si Menor</span>
+			<span class="acordes"  onclick="acorde(4)">Dó Maior</span>
+			<span class="acordes"  onclick="acorde(5)">Dó Menor</span>
+			<span class="acordes"  onclick="acorde(6)">Ré Maior</span>
+			<span class="acordes"  onclick="acorde(7)">Ré Menor</span>
+			<span class="acordes"  onclick="acorde(8)">Mi Maior</span>
+			<span class="acordes"  onclick="acorde(9)">Mi Menor</span>
+			<span class="acordes"  onclick="acorde(10)">Fá Maior</span>
+			<span class="acordes"  onclick="acorde(11)">Fá Menor</span>
+			<span class="acordes"  onclick="acorde(12)">Sol Maior</span>
+			<span class="acordes"  onclick="acorde(13)">Sol Menor</span>
+		</div>
+<div class="notasgindic">
+	<p>Mi</p>
+	<p>Si</p>
+	<p>Sol</p>
+	<p>Re</p>
+	<p>La</p>
+	<p>Mi</p>
+</div>
+	<div id="guitarra">
+
+
+		<div class="sctiong">
+			<span class="notaguitarra" onclick="notag(0)"></span>
+			<span class="notaguitarra"onclick="notag(1)"></span>
+			<span class="notaguitarra"onclick="notag(2)"></span>
+			<span class="notaguitarra"onclick="notag(3)"></span>
+			<span class="notaguitarra"onclick="notag(4)"></span>
+			<span class="notaguitarra"onclick="notag(5)"></span>
+			<span class="notaguitarra"onclick="notag(6)"></span>
+			<span class="notaguitarra"onclick="notag(7)"></span>
+			<span class="notaguitarra"onclick="notag(8)"></span>
+			<span class="notaguitarra"onclick="notag(9)"></span>
+			<span class="notaguitarra"onclick="notag(10)"></span>
+			<span class="notaguitarra"onclick="notag(11)"></span>
+			<span class="notaguitarra"onclick="notag(12)"></span>
+		</div>
+		<div class="sctiong">
+			<span class="notaguitarra"onclick="notag(13)"></span>
+			<span class="notaguitarra"onclick="notag(14)"></span>
+			<span class="notaguitarra"onclick="notag(15)"></span>
+			<span class="notaguitarra"onclick="notag(16)"></span>
+			<span class="notaguitarra"onclick="notag(17)"></span>
+			<span class="notaguitarra"onclick="notag(18)"></span>
+			<span class="notaguitarra"onclick="notag(19)"></span>
+			<span class="notaguitarra"onclick="notag(20)"></span>
+			<span class="notaguitarra"onclick="notag(21)"></span>
+			<span class="notaguitarra"onclick="notag(22)"></span>
+			<span class="notaguitarra"onclick="notag(23)"></span>
+			<span class="notaguitarra"onclick="notag(24)"></span>
+			<span class="notaguitarra"onclick="notag(25)"></span>
+		</div>
+		<div class="sctiong">
+			<span class="notaguitarra"onclick="notag(26)"></span>
+			<span class="notaguitarra"onclick="notag(27)"></span>
+			<span class="notaguitarra"onclick="notag(28)"></span>
+			<span class="notaguitarra"onclick="notag(29)"></span>
+			<span class="notaguitarra"onclick="notag(30)"></span>
+			<span class="notaguitarra"onclick="notag(31)"></span>
+			<span class="notaguitarra"onclick="notag(32)"></span>
+			<span class="notaguitarra"onclick="notag(33)"></span>
+			<span class="notaguitarra"onclick="notag(34)"></span>
+			<span class="notaguitarra"onclick="notag(35)"></span>
+			<span class="notaguitarra"onclick="notag(36)"></span>
+			<span class="notaguitarra"onclick="notag(37)"></span>
+			<span class="notaguitarra"onclick="notag(38)"></span>
+		</div>
+		<div class="sctiong">
+			<span class="notaguitarra"onclick="notag(39)"></span>
+			<span class="notaguitarra"onclick="notag(40)"></span>
+			<span class="notaguitarra"onclick="notag(41)"></span>
+			<span class="notaguitarra"onclick="notag(42)"></span>
+			<span class="notaguitarra"onclick="notag(43)"></span>
+			<span class="notaguitarra"onclick="notag(44)"></span>
+			<span class="notaguitarra"onclick="notag(45)"></span>
+			<span class="notaguitarra"onclick="notag(46)"></span>
+			<span class="notaguitarra"onclick="notag(47)"></span>
+			<span class="notaguitarra"onclick="notag(48)"></span>
+			<span class="notaguitarra"onclick="notag(49)"></span>
+			<span class="notaguitarra"onclick="notag(50)"></span>
+			<span class="notaguitarra"onclick="notag(51)"></span>
+		</div>
+<div class="sctiong">
+			<span class="notaguitarra"onclick="notag(52)"></span>
+			<span class="notaguitarra"onclick="notag(53)"></span>
+			<span class="notaguitarra"onclick="notag(54)"></span>
+			<span class="notaguitarra"onclick="notag(55)"></span>
+			<span class="notaguitarra"onclick="notag(56)"></span>
+			<span class="notaguitarra"onclick="notag(57)"></span>
+			<span class="notaguitarra"onclick="notag(58)"></span>
+			<span class="notaguitarra"onclick="notag(59)"></span>
+			<span class="notaguitarra"onclick="notag(60)"></span>
+			<span class="notaguitarra"onclick="notag(61)"></span>
+			<span class="notaguitarra"onclick="notag(62)"></span>
+			<span class="notaguitarra"onclick="notag(63)"></span>
+			<span class="notaguitarra"onclick="notag(64)"></span>
+		</div>
+		<div class="sctiong">
+			<span class="notaguitarra"onclick="notag(65)" ></span>
+			<span class="notaguitarra"onclick="notag(66)" ></span>
+			<span class="notaguitarra"onclick="notag(67)" ></span>
+			<span class="notaguitarra"onclick="notag(68)" ></span>
+			<span class="notaguitarra"onclick="notag(69)" ></span>
+			<span class="notaguitarra"onclick="notag(70)" ></span>
+			<span class="notaguitarra"onclick="notag(71)" ></span>
+			<span class="notaguitarra"onclick="notag(72)" ></span>
+			<span class="notaguitarra"onclick="notag(73)" ></span>
+			<span class="notaguitarra"onclick="notag(74)" ></span>
+			<span class="notaguitarra"onclick="notag(75)" ></span>
+			<span class="notaguitarra"onclick="notag(76)" ></span>
+			<span class="notaguitarra"onclick="notag(77)" ></span>
+		</div>
+		<div class="cordasg">
+			<span onmouseenter ="notag(78)"></span>
+			<span onmouseenter ="notag(79)"></span>
+			<span onmouseenter ="notag(80)"></span>
+			<span onmouseenter ="notag(81)"></span>
+			<span onmouseenter ="notag(82)"></span>
+			<span onmouseenter ="notag(83)"></span>
+		</div>
+		<div class="efeitog">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			
+		</div>
+
+	</div>
+	
+</div>
+<script type="text/javascript">
+
+	var notasguitarra=document.getElementsByClassName('notaguitarra')
+var cordasg=document.getElementsByClassName('cordasg')
+var acordes=document.getElementsByClassName('acordes')
+var A= new Audio('media2/A chord.mp3');
+var Am= new Audio('media2/Am chord.mp3');
+var B= new Audio('media2/B chord.mp3');
+var Bm= new Audio('media2/Bm chord.mp3');
+var C= new Audio('media2/C chord.mp3');
+var Cm = new Audio('media2/Cm chord.mp3');
+var D= new Audio('media2/D chord.mp3');
+var Dm = new Audio('media2/Dm chord.mp3');
+var E = new Audio('media2/E chord.mp3');
+var Em = new Audio('media2/Em chord.mp3');
+var F = new Audio('media2/F chord.mp3');
+var Fm = new Audio('media2/Fm chord.mp3');
+var G = new Audio('media2/G chord.mp3');
+var Gm = new Audio('media2/Gm chord.mp3');
+	/*var mig1 = new Audio('media/re.mp3');;
+	var fag1= new Audio('media/do.mp3');
+	var  solg1= new Audio('media/do.mp3');
+	var lag1= new Audio('media/do.mp3');
+	var sig1= new Audio('media/do.mp3');
+	var  dog1= new Audio('media/do.mp3');
+	var reg1= new Audio('media/do.mp3');
+	var mig2= new Audio('media/do.mp3');
+	var fag2= new Audio('media/do.mp3');
+	var solg2= new Audio('media/do.mp3');
+	var lag2= new Audio('media/do.mp3');
+	var sig2= new Audio('media/do.mp3');
+	var dog2= new Audio('media/do.mp3');
+
+	var sig3= new Audio('media/do.mp3');
+	var dog3= new Audio('media/do.mp3');
+	var reg3= new Audio('media/do.mp3');
+	var mig3= new Audio('media/do.mp3');
+	var fag3= new Audio('media/do.mp3');
+	var solg3= new Audio('media/do.mp3');
+	var lag3= new Audio('media/do.mp3');
+	var sig4= new Audio('media/do.mp3');
+	var dog4= new Audio('media/do.mp3');
+	var reg4= new Audio('media/do.mp3');
+	var mig4= new Audio('media/do.mp3');
+	var fag4= new Audio('media/do.mp3');
+	var solg4= new Audio('media/do.mp3');
+
+	var solg5= new Audio('media/do.mp3');
+	var lag5= new Audio('media/do.mp3');
+	var sig5= new Audio('media/do.mp3');
+	var dog5= new Audio('media/do.mp3');
+	var reg5= new Audio('media/do.mp3');
+	var mig5= new Audio('media/do.mp3');
+	var fag5= new Audio('media/do.mp3');
+	var solg6= new Audio('media/do.mp3');
+	var lag6= new Audio('media/do.mp3');
+	var sig6= new Audio('media/do.mp3');
+	var dog6= new Audio('media/do.mp3');
+	var reg6= new Audio('media/do.mp3');
+	var mig6= new Audio('media/do.mp3');
+
+	var reg7= new Audio('media/do.mp3');
+	var mig7= new Audio('media/do.mp3');
+	var fag7= new Audio('media/do.mp3');
+	var solg7= new Audio('media/do.mp3');
+	var lag7= new Audio('media/do.mp3');
+	var sig7= new Audio('media/do.mp3');
+	var dog7= new Audio('media/do.mp3');
+	var reg8= new Audio('media/do.mp3');
+	var mig8= new Audio('media/do.mp3');
+	var fag8= new Audio('media/do.mp3');
+	var solg8= new Audio('media/do.mp3');
+	var lag8= new Audio('media/do.mp3');
+	var sig8= new Audio('media/do.mp3');
+
+	var lag9= new Audio('media/do.mp3');
+	var sig9= new Audio('media/do.mp3');
+	var dog9= new Audio('media/do.mp3');
+	var reg9= new Audio('media/do.mp3');
+	var mig9= new Audio('media/do.mp3');
+	var fag9= new Audio('media/do.mp3');
+	var solg9= new Audio('media/do.mp3');
+	var lag10= new Audio('media/do.mp3');
+	var sig10= new Audio('media/do.mp3');
+	var dog10= new Audio('media/do.mp3');
+	var reg10= new Audio('media/do.mp3');
+	var mig10= new Audio('media/do.mp3');
+	var fag10= new Audio('media/do.mp3');
+
+	var mig11= new Audio('media/do.mp3');
+	var fag11= new Audio('media/do.mp3');
+	var solg11= new Audio('media/do.mp3');
+	var lag11= new Audio('media/do.mp3');
+	var sig11= new Audio('media/do.mp3');
+	var dog11= new Audio('media/do.mp3');
+	var reg11= new Audio('media/do.mp3');
+	var mig12= new Audio('media/do.mp3');
+	var fag12= new Audio('media/do.mp3');
+	var solg12= new Audio('media/do.mp3');
+	var lag12= new Audio('media/do.mp3');
+	var sig12= new Audio('media/do.mp3');
+	var dog12= new Audio('media/do.mp3');
+	
+var notasguitarrac1=[ mig1,fag1,solg1,lag1,sig1,dog1,reg1,mig2,fag2,solg2,lag2,sig2,dog2]
+var notasguitarrac2=[sig3,dog3,reg3,mig3,fag3,solg3,lag3,sig4,dog4,reg4,mig4,fag4,solg4]
+var notasguitarrac3=[solg5,lag5,sig5,dog5,reg5,mig5,fag5,solg6,lag6,sig6,dog6,reg6,mig6]
+var notasguitarrac4=[reg7,mig7,fag7,solg7,lag7,sig7,dog7,reg8,mig8,fag8,solg8,lag8,sig8]
+var notasguitarrac5=[lag9,sig9,dog9,reg9,mig9,fag9,solg9,lag10,sig10,dog10,reg10,mig10,fag11]
+var notasguitarrac6=[mig11,fag11,solg11,lag11,sig11,dog11,reg11,mig12,fag12,solg12,lag12,sig12,dog12]
+var pgc1=notasguitarrac1[0]
+var pgc2=notasguitarrac2[0]
+var pgc3=notasguitarrac3[0]
+var pgc4=notasguitarrac4[0]
+var pgc5=notasguitarrac5[0]
+var pgc6=notasguitarrac6[0]
+	console.log(pgc1)
+
+
+	function notag(n) {
+		
+		if (n<13) {
+			for (var i = 0; i < 13; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc1=notasguitarrac1[n]
+				pgc1.play()
+
+		
+		} else if (n>12&& n<26) {
+			for (var i = 13; i <26 ; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc2=notasguitarrac2[n-13]
+				pgc2.play()
+	}else if (n>25&& n<39) {
+		for (var i = 26; i <39 ; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc3=notasguitarrac3[n-26]
+				pgc3.play()
+
+}else if (n>38&& n<52) {
+		for (var i = 39; i <52 ; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc4=notasguitarrac4[n-39]
+				pgc4.play()
+			
+}else if (n>51&& n<65) {
+		for (var i = 52; i <65 ; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc5=notasguitarrac5[n-52]
+				pgc5.play()
+			
+	}else if (n>64&& n<78) {
+		for (var i = 65; i <78 ; i++) {
+				notasguitarra[i].style.backgroundColor=`black`
+			}
+				notasguitarra[n].style.backgroundColor=`rgb(13,208,250)`
+				 pgc6=notasguitarrac6[n-65]
+				pgc6.play()
+			} else if(n>77){
+				
+				switch(n){
+					case 78:
+					pgc1.load()
+
+						pgc1.play()
+					break
+						case 79:
+						pgc2.load()
+					pgc2.play()
+					break
+						case 80:
+						pgc3.load()
+					pgc3.play()
+					break
+						case 81:
+						pgc4.load()
+					pgc4.play()
+					break
+						case 82:
+						pgc5.load()
+					pgc5.play()
+					break
+						case 83:
+						pgc6.load()
+					pgc6.play()
+					break
+				}
+}
+}
+*/
+
+function acorde(x){
+	
+	for (var i = 0; i < 78; i++) {
+		notasguitarra[i].style.background='black';
+	}
+	
+switch(x){
+
+	case 0:
+notasguitarra[14].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[27].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[40].style.backgroundColor=`rgb(13,208,250)`
+A.play()
+	break
+	case 1:
+	notasguitarra[13].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[27].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[40].style.backgroundColor=`rgb(13,208,250)`
+Am.play()
+	break
+	case 2:
+	notasguitarra[16].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[29].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[42].style.backgroundColor=`rgb(13,208,250)`
+B.play()
+	break
+	case 3:
+	notasguitarra[15].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[42].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[29].style.backgroundColor=`rgb(13,208,250)`
+Bm.play()
+	break
+	case 4:
+	notasguitarra[13].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[40].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[54].style.backgroundColor=`rgb(13,208,250)`
+C.play()
+	break
+	case 5:
+	notasguitarra[16].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[30].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[56].style.backgroundColor=`rgb(13,208,250)`
+Cm.play()
+	break
+	case 6:
+	notasguitarra[1].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[15].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[27].style.backgroundColor=`rgb(13,208,250)`
+D.play()
+	break
+	case 7:
+	notasguitarra[0].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[15].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[27].style.backgroundColor=`rgb(13,208,250)`
+Dm.play()
+	break
+	case 8:
+	notasguitarra[26].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[40].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[53].style.backgroundColor=`rgb(13,208,250)`
+E.play()
+	break
+	case 9:
+	
+notasguitarra[40].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[53].style.backgroundColor=`rgb(13,208,250)`
+Em.play()
+
+	break
+
+	case 10:
+	notasguitarra[27].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[41].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[54].style.backgroundColor=`rgb(13,208,250)`
+F.play()
+	break
+	case 11:
+
+notasguitarra[41].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[54].style.backgroundColor=`rgb(13,208,250)`
+Fm.play()
+	break
+	case 12:
+	notasguitarra[2].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[53].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[67].style.backgroundColor=`rgb(13,208,250)`
+G.play()
+	break
+	case 13:
+	notasguitarra[43].style.backgroundColor=`rgb(13,208,250)`
+notasguitarra[56].style.backgroundColor=`rgb(13,208,250)`
+Gm.play()
+	break
+
+}
+}
+
+</script>
+</div>
+<div class="pagbaixo">
+	<div class="intoducton">
+			<h1 style="" id="Bass">Baixo</h1>
+		</div>
+	<div class="content" style="">
+
+		<div class="caixa">
+
+			<div class="caixatexto">
+				
+				<fieldset style=" height:320px; border: none;" class="textb">
+					<h1>&nbsp &nbsp &nbsp |&nbsp Baixo</h1>
+					
+					<p></p>
+					&nbsp &nbsp &nbsp |&nbsp O baixo é um instrumento de cordas, comummente utilizado no rock. Possuem quatro cordas, que correspondem às 4 notas mais graves da guitarra (Mi, Lá, Ré e Sol) mas são afinadas numa tonalidade correspondente a uma oitava mais grave. O baixo é, geralmente, das bases mais importantes de uma banda, visto que são estes que têm mão na condução e no entrosamento com os demais instrumentos, permitindo a harmonia entre os elementos e instrumentos da banda.
+				</fieldset>
+			</div>
+			<div class="caixaimg" style="background: url(imagens/baixo2.png) no-repeat;background-size: auto 80%;background-position: center; background-color: rgba(21,21,21,0.95);">
+				
+			</div>
+		</div>
+		
+	</div>
+	<div style="width: 100%;min-height: 250px; background: rgb(251,251,251);;padding-top: 150px; padding-bottom: 90px;">
+		<div class="notasgindib" style="background: rgba(30,30,30,0.9);" >
+	<p>Sol</p>
+	<p>Ré</p>
+	<p>Lá</p>
+	<p>Mi</p>
+	
+</div>
+<div class="baixo">
+	<span class="cordasbaixo " onclick="baixo(0)" onmouseenter="baixo(0)"></span>
+	<span class="cordasbaixo" onclick="baixo(1)" onmouseenter="baixo(1)"></span>
+	<span class="cordasbaixo"onclick="baixo(2)" onmouseenter="baixo(2)"></span>
+	<span class="cordasbaixo"onclick="baixo(3)"onmouseenter="baixo(3)"></span>
+</div>
+<div class="cordasb">
+			<span onclick="baixo(0)" onmouseenter="baixo(0)"></span>
+			<span onclick="baixo(1)" onmouseenter="baixo(1)"></span>
+			<span onclick="baixo(2)" onmouseenter="baixo(2)"></span>
+			<span onclick="baixo(3)" onmouseenter="baixo(3)"></span>
+			
+		</div>
+		
+		<script type="text/javascript">
+			var cordasbaixo= document.getElementsByClassName('cordasbaixo')
+			var corda_01= new Audio('media2/CORDA_01_G.mp3');
+			var corda_02= new Audio('media2/CORDA_02_D.mp3');
+			var corda_03= new Audio('media2/CORDA_03_A.mp3');
+			var corda_04= new Audio('media2/CORDA_04_E.mp3');
+
+		function baixo(b){
+				for (var i = 0; i < 4; i++) {
+		cordasbaixo[i].style.background='black';
+	}
+				switch(b){
+					case 0:
+					cordasbaixo[0].style.backgroundColor=`rgb(13,208,250)`
+					corda_01.volume=0.33;
+					corda_01.pause()
+					corda_01.load()
+					corda_01.play()
+					break
+					case 1:
+					cordasbaixo[1].style.backgroundColor=`rgb(13,208,250)`
+					corda_02.volume=0.33;
+
+					corda_02.pause()
+					corda_02.load()
+					corda_02.play()
+					break
+					case 2:
+					cordasbaixo[2].style.backgroundColor=`rgb(13,208,250)`
+					corda_03.volume=0.33;
+
+					corda_03.pause()
+					corda_03.load()
+					corda_03.play()
+					break
+					case 3:
+					cordasbaixo[3].style.backgroundColor=`rgb(13,208,250)`
+					corda_04.volume=0.33;
+
+					corda_04.pause()
+					corda_04.load()
+					corda_04.play()
+					break
+			}
+		}
+		</script>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	var current=1
+
+	var box=document.getElementsByClassName('division')
+function plusSlides(n) {
+	let current2 = current+n
+	current= current2
+	
+	 if(current==1){
+	for (var i = 0; i < 3; i++) {
+		box[i].style.left=0+`%`
+
+	}
+		
+	}else if( current==2){
+		box[0].style.left= 33+`%`
+		box[1].style.left= 33+`%`
+		box[2].style.left= -66 +`%`
+		}
+else if( current==3){
+		box[0].style.left= 66+`%`
+		box[1].style.left= -33+`%`
+		box[2].style.left= -33+`%`
+
+
+}else if (current>3 ){
+		current=1
+		for (var i = 0; i < 3; i++) {
+		box[i].style.left=0+`%`
+	}}else{
+	current=3
+	box[0].style.left= 66+`%`
+		box[1].style.left= -33+`%`
+		box[2].style.left= -33+`%`
+		
+}
+}
+
+
+
+function pag(pagina) {
+	pagpiano[0].style.display=`none`
+	paguitarra[0].style.display=`none`
+	pagbaixo[0].style.display=`none`
+	imgf[0].innerHTML=`<img class="img3" src="imagens/transicao4.jpg">`
+	if (pagina==0) {
+		pagpiano[0].style.display=`block`
+	}
+	if (pagina==1) {
+		
+		paguitarra[0].style.display=`block`
+	}
+	if (pagina==2) {
+		
+		pagbaixo[0].style.display=`block`
+	}
+}
+</script>
+</div>
+
+<div class="pag5">
+	<div style="width: 100%; background: rgb(250,250,250); padding-top: 5%;" id="Final_Test">
+<form class="teste" >
+	
+<div class="pergunta">
+	<span> | Qual é a diferença (em tons) entre mi e fá?</span>
+	<label>
+	<input class="resposta" type="radio" name="a">
+	<span> | Um meio de um tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="a">
+	<span> | Um quarto de um tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="a">
+	<span> | Um tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="a">
+	<span> |  Dois tons.</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span> |  O que é um oitava?</span>
+	<label>
+	<input class="resposta" type="radio" name="b">
+	<span>  |  Um conjunto de quaisquer oito notas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="b">
+	<span> |  Um conjunto de oito notas seguidas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="b">
+	<span> |   Um conjunto de notas entre um dó e outro dó.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="b">
+	<span> |  Um conjunto de sete notas.</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span> |  Quantos tempos rítmicos vale uma minima?</span>
+	<label>
+	<input class="resposta" type="radio" name="c">
+	<span> |  Meio tempo.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="c">
+	<span> |  Um tempo.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="c">
+	<span> |  Um quarto de um tempo.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="c">
+	<span> |  Dois tempos.</span>
+	</label>
+</div>
+
+<div class="pergunta">
+	<span> |  Por quantas linhas é constituida uma pauta?</span>
+	<label>
+	<input class="resposta" type="radio" name="e">
+	<span> |  Por 5 linhas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="e">
+	<span> |  Por 4 linhas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="e">
+	<span> |  Por 3 linhas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="e">
+	<span> |  Por 6 linhas.</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span> |  Na clave de sol :</span>
+	<label>
+	<input class="resposta" type="radio" name="f">
+	<span> |  O  primeiro sol vai ser na primeira linha a contar de cima para baixo.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="f">
+	<span> | O primeiro sol vai ser na ultima linha a contar de cima para baixo.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="f">
+	<span> | O Segundo dó vai ser no segundo espaço a contar de cima para baixo. </span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="f">
+	<span> | Nenhuma das anteriores.</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span> | Um sustenido:</span>
+	<label>
+	<input class="resposta" type="radio" name="g">
+	<span> | Aumenta um tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="g">
+	<span> | Diminui um tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="g">
+	<span> | Diminui meio tom.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="g">
+	<span> | Aumenta meio tom.</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span> |Qual a escala de Mi Bemol Maior?</span>
+	<label>
+	<input class="resposta" type="radio" name="h">
+	<span> |Mi#, Fá, Sol, Lá#, Sí#, Dó, Ré, Mi# </span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="h">
+	<span>| Lá♭, Si♭, Dó, Ré♭, Mi♭, Fá, Sol, Lá♭</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="h">
+	<span> | Mi♭, Fá, Sol, Lá♭, Sí♭, Dó, Ré, Mi♭</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="h">
+	<span> |Lá#, Si#, Dó, Ré#, Mi#, Fá, Sol, Lá#</span>
+	</label>
+</div>
+<div class="pergunta">
+	<span>| Um piano tem:</span>
+	<label>
+	<input class="resposta" type="radio" name="i">
+	<span>| 7 oitavas e 2 pedais.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="i">
+	<span>| 7 oitavas e 3 pedais.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="i">
+	<span>| 8 oitavas e 3 pedais. </span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="i">
+	<span>| 8 oitavas e 2 pedais.</span>
+	</label>
+	
+</div>
+<div class="pergunta">
+	<span>| Uma guitarra é constituída por:</span>
+	<label>
+	<input class="resposta" type="radio" name="j">
+	<span> | O braço e o corpo.</span>
+	</label><label>
+	<input class="resposta"type="radio" name="j">
+	<span>| O braço e a cabeça.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="j">
+	<span>| O corpo e a escala.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="j">
+	<span>| O corpo e a cabeça.</span>
+	</label>
+	
+</div>
+<div class="pergunta">
+	<span> | Quantas cordas tem um baixo clássico? </span>
+	<label>
+	<input class="resposta" type="radio" name="d">
+	<span>  | 6 cordas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="d">
+	<span> | 5 cordas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="d">
+	<span> | 4 cordas.</span>
+	</label>
+	<label>
+	<input class="resposta"type="radio" name="d">
+	<span> | 7 cordas.</span>
+	</label>
+</div>
+<span class="corrigir" onclick="corrigir(0)"> Corrigir</span>
+<span class="corrigir" onclick="corrigir(2)"> Recomeçar</span>
+<span class="resultado">0/10</span>
+</form>
+</div>
+<script type="text/javascript">
+	var resultado= document.getElementsByClassName('resultado')
+	var pergunta= document.getElementsByClassName('pergunta')
+var resposta= document.getElementsByClassName('resposta')
+
+function corrigir(x) {
+	if (x==0){
+		let y=0
+			if (resposta[0].checked==true) {
+					y=y+1
+				pergunta[0].style.color=`rgb(13,250,100)`
+			}else{	
+					pergunta[0].style.color=`red`
+			}
+				if (resposta[5].checked==true) {
+					pergunta[1].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[1].style.color=`red`
+			}
+			if (resposta[11].checked==true) {
+					pergunta[2].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[2].style.color=`red`
+			}
+			if (resposta[12].checked==true) {
+					pergunta[3].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[3].style.color=`red`
+			}
+			if (resposta[18].checked==true) {
+					pergunta[4].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[4].style.color=`red`
+			}
+			if (resposta[23].checked==true) {
+					pergunta[5].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[5].style.color=`red`
+			}
+			if (resposta[26].checked==true) {
+					pergunta[6].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[6].style.color=`red`
+			}
+			if (resposta[29].checked==true) {
+					pergunta[7].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[7].style.color=`red`
+			}
+			if (resposta[32].checked==true) {
+					pergunta[8].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[8].style.color=`red`
+			}
+			if (resposta[38].checked==true) {
+					pergunta[9].style.color=`rgb(13,250,100)`
+				y++
+			}else{
+				pergunta[9].style.color=`red`
+			}
+			console.log(y)
+			 resultado[0].innerHTML=y +` /10`
+	}
+	if (x==2) {
+for (var i = 0; i < 39; i++) {
+	  resposta[i].checked=false
+}
+y=0
+resultado[0].innerHTML=  y +` /10`
+for (var i = 0; i < 10; i++) {
+	  pergunta[i].style.color=`black`
+}
+	}
+}
+</script>
+
+</div>
+<script type="text/javascript">
+	var header= document.getElementsByTagName('header')
+var animatio= document.getElementsByClassName('animation')
+	//topicos[4].style.background='rgb(10,208,250)'
+var menu= document.getElementById('menu')
+	
+	menu2[0].addEventListener('click', ativar)
+	var pag1=document.getElementsByClassName("pag1")
+	var text = document.getElementsByClassName('text')
+	var textb= document.getElementsByClassName('textb')
+	var content= document.getElementsByClassName('content')
+
+	var contentpt=['<h3 style="font-weight: bold;">|&nbsp Piano </h3><h2><img src="imagens/piano.jpg"></h2><p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos do piano e pratique num piano virtual. Nota: Antes de aprender a tocar piano deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica.</p>',
+
+	'<h3 style="font-weight: bold;">|&nbsp Guitarra </h3><h2><img src="imagens/guitarra.jpg"></h2><p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos da guitarra e pratique numa guitarra virtual. Nota: Antes de aprender a tocar guitarra deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica.</p>',
+
+	'<h3 style="font-weight: bold;">|&nbsp Baixo </h3><h2><img src="imagens/baixo_1.png"></h2><p> &nbsp &nbsp &nbsp |&nbsp Aprenda os basicos do baixo e pratique num baixo virtual. Nota: Antes de aprender a tocar baixo deve ter um conceito basico de musica, se ainda não tiver pode aprender no basicos da musica.</p>',
+
+	]
+	 var contentuk=['<h3 style="font-weight: bold;">|&nbsp Piano </h3><h2><img src="imagens/piano.jpg"></h2><p> &nbsp &nbsp &nbsp |&nbsp Learn the basics of the piano and practice on a virtual piano. Note: Before learning to play the piano you must have a basic concept of music, if you don`t have it you can learn in the basics of music.</p>',
+
+	'<h3 style="font-weight: bold;">|&nbsp Guitar </h3><h2><img src="imagens/guitarra.jpg"></h2><p> &nbsp &nbsp &nbsp |&nbsp Learn the basics of the guitar and practice on a virtual guitar. Note: Before learning to play the guitar you must have a basic concept of music, if you don`t have it you can learn in the basics of music.</p>',
+
+	'<h3 style="font-weight: bold;">|&nbsp Bass </h3><h2><img src="imagens/baixo_1.png"></h2><p> &nbsp &nbsp &nbsp |&nbsp Learn the basics of the bass and practice on a virtual bass. Note: Before learning to play the bass you must have a basic concept of music, if you don`t have it you can learn in the basics of music.</p>',
+
+	]
+	
+	 var textouk=['<h1>&nbsp &nbsp &nbsp |&nbsp What is World of Music?</h1><p></p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | World of Music is a website created for the <a href="https://www.sitestar.pt/" target="blank">“Site Star”</a> contest with the aim of teaching music. On the website you can learn: the basics of music (reading sheet music, musical notes, rhythmic times ...), the relation of music with many subjects (mathematics, physics, history ...) and you can also learn how to play piano/bass/guitar being able to practice on a  virtual piano / bass / guitar. At the end you can also take a quiz to test your knowledge. If you like the site you can rate it in “Rate us” at the bottom of the site.<p></p>&nbsp &nbsp &nbsp |&nbsp  To improve our website development skills we decided to make all the images from scratch or adapt images (without copyright) found on the internet and we also decided to make the website template from scratch taking some inspirations from the<a href="https://www.youtube.com/c/OnlineTutorials4Designers/channels" target="blank"> “Online tutorials”</a>, the background music is <a href="https://youtu.be/duWhDWRSWZ8" target="blank">“Long Calming Piano Background (Creative Commons)” by Ds Production </a> (without copyright).<p></p>&nbsp &nbsp &nbsp |&nbsp All instrument sounds were recorded and provided by our partnership <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a>.',
+
+	 '<h1>&nbsp &nbsp &nbsp |&nbsp Musical Notes</h1>&nbsp &nbsp &nbsp| Musical note is a term used in music to define certain sounds, in other words musical notes are like a musical alphabet that allows us to associate sounds with common names. There are 7 musical notes C, D, E, F, G, A and B. After the B comes another C and the musical notes repeat themselves again.<p></p>&nbsp &nbsp &nbsp| The big difference between each note is its frequency. The frequency increases from one note to another, being lower in the C and higher in the B, the difference in frequency between two notes is called the tone, that means that it will always be increased one tone between two consecutives notes, with the exception of the E-F and B-C which will only increase half pinch between them.<p></p> &nbsp &nbsp &nbsp| As previously mentioned, the musical notes are repeated every eight notes, so two equal notes of different octaves (octave is a set of eight consecutive musical notes Ex: C-C, D-D) will have different frequencies, that means that they will sound similar, however one will be more acute than the other.',
+
+	 '<h1>&nbsp &nbsp &nbsp |&nbsp Rhythmic times</h1><p></p>&nbsp &nbsp &nbsp &nbsp| In a music the duration of a note is represented by symbols (see image) with each symbol having a certain rhythmic value. These symbols are: the whole note that has a value of 4 beats, the half note that has the value of two beats, the quarter note that has the value of one beat, the eighth note that has the value of half a beat the sixteen that has the value of a quarter of a beat and so on. NOTE: the eighth notes and sixteenth notes when they are more than one in a row can be put together and be represented as it is shown in the image.<p></p>&nbsp &nbsp &nbsp &nbsp| As you may have noticed, each note has a different rhythmic value however it is initially undefined, this is because the value of each beat is only defined at the beginning of each music sheet (see image) and it varies from music sheet to music sheet. The beat is defined by assigning a value (usually in BPM-Beats per minute) to a rhythmic symbol, usually the quarter note (). This way, a quarter note can last either 1 second or 5 seconds depending on what is defined as the rhythmic value.<p></p>',
+
+  '&nbsp &nbsp &nbsp &nbsp| In music there are also intervals of time where there is no note being played, this is called a rest and just like the notes there are several symbols that represent the duration of each rest (see image). The symbols are: the whole rest which has a value of 4 beats, the half rest which has the value of two beats the quarter rest which has the value of one beat the eighth rest which has the value of half a beat, the sixteenth rest that has the value of a quarter of a beat and so on.<p></p>&nbsp &nbsp &nbsp &nbsp | Another thing that is also very used in music to define rhythmic times is the addition of a point (.) to a rhythmic symbol. This point is used to add more half of the value of the symbol, that means that, if the symbol was worth 4 beats it would be worth 6, if it was worth 1 it would be worth 1.5.',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp  Music Sheets</h1><p></p>&nbsp &nbsp &nbsp| A music sheet is where the harmonic, melodic and rhythmic aspects of a music are recorded. In order to be able to read a music sheet properly, it is necessary to know: how the beats of the notes are represented, what musical clefs are and how the notes are represented on the staves. As we have already seen how the beats of the notes are represented, we will start by seeing how the musical notes are represented on the staves.<p></p>&nbsp &nbsp &nbsp| First of all, let`s see what is a stave. A stave is a region in the music sheet formed by lines and spaces. Each line and space is used to represent a different musical note as shown in the image. Initially there are only 5 lines, but it is possible to add more lines by drawing a dash in the middle of the note. The higher the notes are in the stave the more acute they are.<p></p>&nbsp &nbsp &nbsp| Now let`s see what a clef is. A clef is a symbol that appears at the beginning of each stave and it is use to represent the reference lines adopted for the notes. The three most common clefs are the G, F and C clefs. The G clef indicates that the second line from bottom to top is the G of the fourth octave of a piano, the F clef indicates that the second line from top to bottom is the F of the third octave of a piano, and the C clef indicates that third line is the central C of a piano (the C of the fourth octave of a piano).',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Sharps and Flats</h1><p></p>&nbsp &nbsp &nbsp| As mentioned earlier, two consecutive notes will always vary 1 tone between them with the exception of the E-F and B-C, which will only vary  half a tone between them, however in addition to the musical notes that we already know( C, D, E, F, G, A, B) there are intermediate notes that exist between the musical notes, where the difference in tones between one and the other is half a tone, that means that between two notes for example C and D there is going to exist a note that is half a tone higher that C and half a tone lower that D( this happens with all the notes with the exceptions of E-F and B-C). This notes we call sharps or flats. But then what is the difference between sharp and flat? Well the sharp (#) is used when you want to indicate that the note is half a tone higher of the base note (for example C sharp is going to be half a tone higher than C so C sharp will be the note between C and D). The flats are used to indicate that the note is half a tone lower that the base note (for example D flat is half a tone lower than D, that means that it will be the note between C and D).<p></p>&nbsp &nbsp &nbsp| In staves, sharps and flats are represented by the symbols (#) and (♭) respectively, and it can be represented before a note or at the beginning of the stave. If we represent the sharp or the flat only before a note, then the value of the sharp/flats will only be attributed to that specific note.If the sharps and the flats are represented at the beginning of the stave then we are attributing the value to all the notes of the music, so for example if at the beginning of the stave there is a C sharp than all the C in the music are going to be sharp (to remove the value of a sharp or a flat from a note we use the natural before the note).',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Musical Scales</h1><p></p>&nbsp &nbsp &nbsp| A musical scale is an ordered sequence of musical notes that are repeated in cycle Ex: C, D, E, F, G, A, B, C, on this scale we started with the note C and then followed a sequence of tone, half a tone, Tone, Tone, half a tone, tone, tone and tone until you reach the C again. For each musical note there is a basic scale, which can be a major or a minor scale. On a Major scale the sequence is: tone, tone, half a tone, tone, tone, tone and half a tone (the sequence always starts and ends on the respective note of the scale EX: C major the sequence will start and end at C). On a minor scale the sequence is: tone, half a tone, tone, tone, half a tone, tone and tone.<p></p>&nbsp &nbsp &nbsp| Another way to define a scale is with their sharps and flats. The order of the sharps is: F #; C#; G#; D#; A#; E#; B #. While the order with the flats is exactly the opposite: B ♭; E♭; A ♭; D ♭; G ♭; C ♭; F♭. To calculate a scale by its sharps, half a tone is reduced to the key of the scale and we will know which is the last sharp of the order (For example, on the A major scale, by decreasing half a tone, we will have the G #. So the Scale of A major will use the sharps from the list until G #: A, B, C #, D, E, F #, G #, A.). In the case of the flats, the penultimate flat will indicate the major tone (In the case of the A flat major scale the penultimate flat will be exactly the A itself, so when we go to the flat order we find the A ♭ and we see what the next note is, so the A flat major scale will be: A ♭, B ♭, C, D, E ♭, F, G, A ♭.)' ,
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Physics </h1><p></p>&nbsp &nbsp &nbsp| Physics is related to music through frequency. As we have already mentioned on the website, what defines a note is its frequency, that is, each note has a different frequency from one another, and the frequency of a note is what gives it its characteristic sound (The note there, for example, corresponds to a frequency of 440 Hz.). The higher the frequency of a note the higher it will be and the lower the frequency the lower it will be.<p></p>&nbsp &nbsp &nbsp | But then what is the frequency and how does it define a sound? Well, the frequency is a repetition with a time reference, that is, it is something that happens x in x time. For example, if a bicycle wheel spins in 1 second then its frequency will be one revolution per second (or one Htz). The sound in turn is an invisible wave that oscillates (contracts and relaxes in order to move), so if a note oscillates 5 times per second then it will have a frequency of 5Hz. As the human ear distinguishes sounds by their oscillations, that is, by their frequency, then the frequency of each note is what will give it its characteristic sound.',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp History and culture of the arts </h1><p></p>&nbsp &nbsp &nbsp| Throughout the history of mankind, there have been several different eras and cultures that have had their influence over music. The most famous times are the classic era, the romantic era, the Baroque era and the Renaissance era. However, just as there were those different eras and cultures, there have been many more eras / cultures with a very high influence on music. Manly, the Egyptian and Asian culture, and our current era. When comparing the different eras, even though their bases are the same, the differences are extremely significant. And, as mentioned earlier, there are many important figures in history who have been strongly linked to music. It is practically general knowledge to know Beethoven and Mozart from the classics and baroque, or to know Drake, from nowadays.<p></p>&nbsp &nbsp &nbsp | Talking about Beethoven, one of the most famous musicians, who in addition to being a pianist and composer was deaf (something that made his life much harder). However, despite his difficulties Beethoven became a great musician and an inspiration for many future musicians. A man who, despite not having the sense we need most, showed that it is possible to be connected to music and create works that will never be forgotten. Beethoven has also one of the most important musical works, extremely well known, such as the 5th and 9th symphony, as well as the famous Für Elize and its 14th Sonata, known worldwide as “Moonlight Sonata”',
+
+  '<p></p>&nbsp &nbsp &nbsp| In the same way, many other composers had their influence in this magnificent world that is music, like Frédéric Chopin who took virtuosity to another level, and Franz Liszt who, in addition to creating the symphonic poem, left an extensive amount of works to be studied, many of them considered extremely difficult, such as the well-known La Campanela and the Hungarian Rhapsody no.2.<p></p>&nbsp &nbsp &nbsp| But we must never forget those who had great talents and who went unnoticed by a lack of resources and / or oppression. In addition, we must always remember the great figures that relate to music. Leonardo da Vinci, for example, was someone who, in addition to being involved with music when singing and playing, having learned without any kind of teacher, also promoted music by writing essays and reflections on music, in addition to designing and building prototypes of musical instruments. Another very important person to music was Pitágoras, who will be spoken about later.',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Mathematics </h1><p></p>&nbsp &nbsp &nbsp | Mathematics is related to music through Pythagoras. Pythagoras was a Greek philosopher and mathematician who, among his immense discoveries, discovered how to produce musical notes on instruments based on mathematics. Pythagoras discovered that if we multiply the frequency of a musical note by 2, the sound obtained will be the same note, but an octave higher (that is, more acute).<p></p>&nbsp &nbsp &nbsp| Pythagoras discovered this from a stretched string, he realized that by making the string vibrate it produced a sound and he also realized that when he doubled the string he was making different sounds, after doubling the strings several times Pythagoras discovered several patterns , he also realized that if he doubled the string in half, the sound obtained would be the same note as the previous one, but more acute and when doubling it in 3 he realized that the obtained note was different from the initial, but this sounded well together with the previous ones. Thus, Pythagoras continued to make divisions and created mathematical combinations, giving rise to musical scales. Later Pythagoras would also create instruments that could reproduce these scales.',
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Literature </h1><p></p>&nbsp &nbsp &nbsp | It is not easy to imagine how literature can compare with music. Despite both being forms of entertainment, they are quite distinct, which may result in the wrong idea that the two cannot be combined.<p></p>&nbsp &nbsp &nbsp | But clearly this is not true! One good example on how important one is to another is Pessoa’s most important work (the famous "Message") which inspired several modern fades, even if they are sung hundreds of years later, for example, the beautiful music of the Galician group Milladoiro, "O Mar Português". Not to forget that hundreds of years ago literature would always be accompanied with music, the poesies trovadoresca or even the theaters are some examples of that. <p></p>&nbsp &nbsp &nbsp | Another good example are the moments of the Psalms, in Catholic masses, and in opera, they are sung texts, only with the human voice, but that represent the pure connection between music and literature. Furthermore, if we think about it, the current music, which left the standards of music only instrumental (classical time) and started to join the human voice, is a great way of connecting with literature, since everything that is sung with background music is actually a work of literature, with its meaning and / or message to the listener, which was previously understood only by other musicians and specialists, and has now become much easier to understand.',
+
+	 ]
+var textbuk=[ '<h1>&nbsp &nbsp &nbsp |&nbsp Piano </h1><p></p>&nbsp &nbsp &nbsp |A piano consists of 7 octaves with the white keys of the piano being the basic notes and the black keys being the sharps / flats. On a piano the notes go up from left to right so the notes are lower in the left-most octaves and higher in the right-most octaves. On the piano, the C distinguishes itself from the other notes because it is the key before two black keys (note in blue in the image).',
+
+  '<h1>&nbsp &nbsp &nbsp |&nbsp Virtual piano/ Pedals </h1><p></p>&nbsp &nbsp &nbsp |A piano consists of three pedals having these 3 different functions, the left pedal (Una corda) makes the sound softer, the right pedal extends the sound and the central pedal (sostenuto) muffles the sound.<p></p>&nbsp &nbsp &nbsp | On the virtual piano play by clicking on the desired notes or (if you are on a computer) use the corresponding keys on the keyboard. The virtual piano consists of two octaves, which are the two central octaves of a piano.' ,
+
+'<h1>&nbsp &nbsp &nbsp |&nbsp Guitar </h1><p></p>&nbsp &nbsp &nbsp | The classical guitar consists of 2 parts, the neck and the body, the neck being divided into two other parts, the head and the scale. The neck consists of 6 strings, 6 pegs, to tune each string, and 20 spaces called frets, which are divided by small metal bars between them. The body is mostly made up of the opening, where music is usually played, and the fuse and easel. In short, the neck is the part of "what to play" while the body is "where to play"',
+
+'<h1>&nbsp &nbsp &nbsp |&nbsp How to play </h1><p></p>&nbsp &nbsp &nbsp |On the neck we choose the note or the chord to be played, by placing the fingers in specific places, as it will be possible to check below, where you can choose the chord to be played, which will be represented on our virtual guitar, the body is where the musician plays the strings, whether it is a direct touch with the fingers, or with reeds, which facilitates when the musician is playing for a long time.',
+
+'<h1>&nbsp &nbsp &nbsp |&nbsp Bass</h1><p></p>&nbsp &nbsp &nbsp | The bass is a string instrument, commonly used in rock. They have four strings, which correspond to the 4 lowest notes of the guitar (Mi, Lá, D and Sol) but are tuned in a key corresponding to a lower octave. The bass is generally one of the most important bases of a band, since they are the ones who have a hand in conducting and intermingling with other instruments, allowing harmony between the elements and instruments of the band.'
+  ]
+  
+
+
+
+
+		
+var textbpt=['<h1>&nbsp &nbsp &nbsp |&nbsp Piano</h1><p></p>&nbsp &nbsp &nbsp |&nbsp  Um piano é constituido por 7 oitavas sendo as teclas brancas do piano  as notas basicas e as teclas pretas os sustenidos/bemois. Num piano as notas sobem da esquerda para a direita assim as notas são  mais graves nas oitavas mais a esquerda e mais agudas nas oitavas mais a direita. No piano o dó destingue-se das outras notas por ser a tecla antes de duas teclas pretas(nota a azul na imagem).',
+
+'	<h1> |&nbsp Pedais/ Piano virtual</h1><p></p>&nbsp &nbsp &nbsp |&nbsp Um piano é constituido por três pedais tendo estes 3 funções diferentes, o pedal esquerdo( Una corda) deixa o som mais suave,o pedal direito prelonga o som e o pedal central(sostenuto) abafa o som.<p></p> &nbsp &nbsp &nbsp |&nbsp No piano virtual toque cliando nas tocas desejadas ou (se estiver num computador) use as respetivas teclas do teclado. O piano virtual é constituido por duas oitavas sendo estas as duas oitavas centrais de um piano.',
+
+
+'<h1>&nbsp &nbsp &nbsp |&nbsp Guitarra</h1><p></p>&nbsp &nbsp &nbsp |&nbsp A guitarra clássica é constituída por 2 partes, o braço e o corpo, sendo o braço dividido em outras duas partes, a cabeça e a escala. O braço, é composto por  6 cordas, por 6 cravelhas, para afinar cada corda, e por 20 espaços denominados de trastos (Frets em inglês), os quais são divididos por pequenas barras metálicas entre eles. O corpo, por sua vez, é maioritariamente constituído pela abertura, onde geralmente é tocada a música, e o rastilho e cavalete. Em suma, o braço é a parte do “o que tocar” enquanto o corpo é o “onde tocar”.',
+
+
+'	<h1> |&nbsp Como tocar:</h1>&nbsp &nbsp &nbsp |&nbsp Enquanto no braço nós escolhemos a nota a tocar, ou o acorde a tocar, ao colocar os dedos em locais específicos, assim como será possível verificar em baixo, onde poderá escolher o acorde a tocar, que irá ser representado na nossa guitarra virtual, no corpo é onde o músico toca as cordas, seja um toque direto com os dedos, ou com palhetas, que facilita quando o tempo que o músico estará a tocar é grande. ',
+
+'<h1>&nbsp &nbsp &nbsp |&nbsp Baixo</h1><p></p>&nbsp &nbsp &nbsp |&nbsp O baixo é um instrumento de cordas, comummente utilizado no rock. Possuem quatro cordas, que correspondem às 4 notas mais graves da guitarra (Mi, Lá, Ré e Sol) mas são afinadas numa tonalidade correspondente a uma oitava mais grave. O baixo é, geralmente, das bases mais importantes de uma banda, visto que são estes que têm mão na condução e no entrosamento com os demais instrumentos, permitindo a harmonia entre os elementos e instrumentos da banda.'
+]
+
+
+	 var textopt=['<h1>&nbsp &nbsp &nbsp |&nbsp O que é World of Music?</h1> <p></p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   | World of Music é um site criado para o concurso <a href="https://www.sitestar.pt/" target="blank">“Site Star”</a> com o objetivo de ensinar música. No site tu podes aprender: os basicos da musica (ler partituras, notas musicais, tempos ritmicos...), a relação da música com muitas disciplinas (matemática, física, história...) e podes aprender ainda a tocar piano/baixo/guitarra podendo praticar num piano/baixo/guitarra virtual. No final ainda pode realizar um quiz para testar o seu conhecimento. Se gostar do site pode avaliá-lo em “Avalie nos” no rodapé do site. <p> </p> &nbsp &nbsp &nbsp    | Para melhorar as nossas capacidades de desenvolvimento de sites decidimos fazer todas as imagens do zero ou adaptar imagens(sem copyright) encontradas na internet e decidimos também fazer o template do site do zero tirando algumas inspirações do <a href="https://www.youtube.com/c/OnlineTutorials4Designers/channels" target="blank">“Online tutorials”</a>. A música de fundo é <a href="https://youtu.be/duWhDWRSWZ8" target="blank">“Long Calming Piano Background (Creative Commons)” do Ds Production</a>( sem copyright).<p></p> &nbsp &nbsp &nbsp    |Todos os sons dos instrumentos foram gravados e fornecidos pela nossa parceria <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a>.'
+,
+
+	 '<h1>&nbsp &nbsp &nbsp |&nbsp Notas Musicais</h1> <p></p>&nbsp &nbsp &nbsp |  Uma nota musical é um termo usado na música para definir certos sons, ou seja, por outras palavras, as notas musicais são como um alfabeto musical que nos permite associar sons a nomes comuns. Existem 7 notas musicais o Dó(C), Ré(D), Mi(E), Fá(F), Sol(G), Lá(A) e Si(B) (alguns países dão-lhes os nomes c, d, e, f, g, a, b respetivamente). Após o Si volta a vir um Dó e as notas musicais repetem-se novamente.<p></p>&nbsp &nbsp &nbsp |  A grande diferença entre cada nota é a sua frequência. A frequência vai aumentando de nota para nota sendo esta menor no Dó e maior no Si. À diferença de frequência entre duas notas dá-se o nome de tom, ou seja, de uma nota para outra vai sempre aumentar-se um tom com exceção das sequências Mi-Fá e Si-Dó onde aumenta apenas meio tom entre elas.<p></p>&nbsp &nbsp &nbsp |  Como dito anteriormente as notas musicais vão se repetindo de oito em oito notas, assim duas notas iguais de oitavas diferentes (oitava é um conjunto de sete notas musicais seguidas Ex: Dó-Dó, Ré-Ré) vão ter frequências diferentes, ou seja elas vão soar semelhantes, porém uma vai ser mais aguda que a outra.',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Tempos rítmicos </h1> <p></p>&nbsp;&nbsp;|&nbsp;A duração de cada nota numa música é representada por símbolos (ver imagem) tendo cada símbolo um determinado valor rítmico .Esses símbolos são:a semibreve com o valor de 4 tempos;a mínima com o valor de 2 tempos;a semínima que tem o valor de 1 tempo;a colcheia com o valor de 1/2  tempo;a semicolcheia tem o valor de 1/4 de tempo;a fusa com 1/8 de tempo;a semifusa com 1/16 de tempo.NOTA: Quando as colcheias e semicolcheias encontram-se mais que umas seguidas podem se juntar sendo representadas conforme mostra a imagem.<p></p> &nbsp;&nbsp;|&nbsp; Como pode ter reparado anteriormente, cada nota tem um valor rítmico diferente porém este é indefinido inicialmente, isto é porque o valor de cada tempo é definido somente no início de cada partitura e este varia de partitura para partitura (ver imagem). O tempo é definido atribuindo um valor (normalmente em BPM-Batimentos por minuto) a um símbolo rítmico( normalmente a semínima). Desta forma uma semínima tanto pode durar 1 segundo como 5 segundos dependendo do que for definido como o valor rítmico. ',
+
+	 	'&nbsp;&nbsp;|&nbsp;Outra coisa bastante comum na música para definir tempos rítmicos é a adição de um ponto(.) a um símbolo rítmico. Este ponto serve para adicionar mais metade do valor do símbolo. (Exs: Se o símbolo valesse 4 tempos passaria a valer 6; Se valesse 1 passaria a valer 1,5.)<p></p>&nbsp;&nbsp;|&nbsp;Na música também existem intervalos de tempo onde não há nenhuma nota a ser tocada. A esse intervalo de tempo dá-se o nome de pausa, e, assim como as notas, existem vários símbolos que representam a duração de cada pausa (ver imagem). Os símbolos são:a pausa semibreve que tem um valor de 4 tempos;a pausa mínima que tem o valor de 2 tempos;a pausa semínima que tem o valor de 1 tempo;a pausa colcheia que tem o valor de 1/2 tempo;a pausa semicolcheia tem o valor de 1/4 de tempo; a pausa fusa com o valor de 1/8 de tempo;a pausa semifusa com o valor de 1/16 de tempo;<p></p>',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Leitura de partituras </h1> <p></p>&nbsp;&nbsp;|&nbsp;  Uma partitura é onde se registam os aspectos rítmicos, harmônicos e melódicos de uma música. Para poder ler uma partitura é necessário saber como se representam os tempos das notas, o que são as claves musicais e como se representam as notas nas pautas. Uma vez que já vimos como se representam os tempos das notas anteriormente vamos começar por ver como se representam as notas musicais nas pautas.<p></p> &nbsp;&nbsp;|&nbsp; Primeiro de tudo vamos ver o que é que é uma pauta.Uma pauta é uma região na partitura formada por linhas e espaços. Cada linha e cada espaço são usados para representar uma nota musical diferente como mostra a imagem. Inicialmente só existem 5 linhas, mas é possível adicionar mais linhas traçando um traço no meio da nota. As notas vão ficando mais agudas quanto mais altas estiverem.<p></p>&nbsp;&nbsp;|&nbsp;  Agora vamos ver o que é uma Clave. Uma Clave é um símbolo que aparece no início de cada pauta e serve para sinalizar as notas e as linhas de referência adotadas. As três Claves mais comuns são a de Sol a de Fá, ainda que se vejam bastantes de Dó. A Clave de Sol indica que a segunda linha a contar de baixo para cima é o Sol da 4 oitava de um piano. Já a de Fá indica que a segunda linha a contar de cima para baixo é o Fá da terceira oitava de um piano. Por último, a Clave de Dó indica que a terceira linha é o dó central (dó da quarta oitava de um piano).',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Sustenidos e bemois </h1> <p></p>&nbsp;|&nbsp;   Como mencionado anteriormente, de uma nota musical para a outra vai sempre variar um tom com a exceção do Mi-Fá e de Si-Dó onde varia apenas meio tom entre elas, no entanto, para além das notas musicais dó, ré, mi, fá, sol, lá, si,  existem notas musicais intermédias entre estas, em que a diferença de tons entre uma e outra é de meio tom, ou seja, entre duas notas como por exemplo Dó e o Ré, vai existir uma nota que é meio tom superior a Dó e meio tom inferior a Ré (Isto acontece para todas as notas com a exceção de Mi-Fá e de Si-Dó). A estas notas dá-se o nome de sustenidos e bemóis.<p></p>&nbsp;|&nbsp; Mas então qual é a diferença entre sustenido e bemol? Bem o sustenido(#) usa-se quando se quer indicar que a nota referida é meio tom superior à nota base (por exemplo Dó sustenido vai ser meio tom superior a Dó, ou seja vai ser a nota entre dó e ré). Já os bemóis são usados para indicar que a nota referida é meio tom inferior à nota base (por exemplo Ré bemol é meio tom inferior a Ré, ou seja vai ser a nota entre dó e ré).<p></p>&nbsp;|&nbsp; Nas pautas os sustenidos e os bemóis são representados pelos símbolos (#) e (♭) respetivamente, podendo ser representados antes de uma nota ou logo no início da pauta. Se for apresentado no início da pauta, aqueles sustenidos e bemóis estão a ser definidos para a música toda, ou seja se no início da pauta tiver um sustenido no Lá, então todos os Lás da música serão Lás sustenidos, ou seja, é definida uma escala. Para retirar o valor de sustenido ou de bemol de uma nota usa-se o bequadro antes da nota a qual se quer tirar o valor. ',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Escalas Musicais</h1> <p></p>&nbsp &nbsp |&nbsp Uma escala musical é uma sequência ordenada de notas musicais que se repetem em ciclo Ex:dó, ré, mi, fá, sol, lá, si, dó, nesta escala começou-se com a nota dó e seguiu-se uma sequencia de Tom, Semitom, Tom, Tom, Semitom, Tom, Tom tom até chegar outra vez ao dó. Para cada nota musical existe uma escala básica podendo esta ser uma escala maior ou uma menor.Numa escala Maior a sequência é: Tom, Tom, Semitom, Tom, Tom, Tom, Semitom (a sequência começa e acaba sempre na respetiva nota da escala EX: Dó maior a sequencia vai começar e acabar no Dó).Por sua vez, numa Escala Menor a sequência é: Tom, Semitom, Tom, Tom, Semitom, Tom, Tom.<p></p>&nbsp &nbsp &nbsp |&nbsp Outra forma de caracterizar as escalas é pelos seus sustenidos e bemóis. A ordem dos sustenidos é: Fá#; Dó#; Sol#; Ré#; Lá#; Mi#; SI#. enquanto a dos bemóis é exatamente a contrária: Si♭; Mi♭; Lá♭; Ré♭; Sol♭; Dó♭; Fá♭. Para calcular uma escala pelos seus sustenidos reduz-se meio tom à tônica da escala e saberemos qual o último sustenido da ordem (Por exemplo na escala de Lá maior, ao diminuir meio tom teremos o Sol#. Assim a escala de Lá Maior utilizará os sustenidos até ao Sol#: Lá, Si, Dó#, Ré, Mi, Fá#, Sol#, Lá.). Já no caso dos bemóis, o penúltimo bemol vai indicar o tom maior (No caso da escala de lá bemol maior o penúltimo bemol será exatamente o próprio lá bemol, então ao ir à ordem dos bemóis encontramos o Lá♭ e vemos qual é a próxima nota, ou seja, a escala de Lá bemol Maior será: Lá♭, Si♭, Dó, Ré♭, Mi♭, Fá, Sol, Lá♭.).',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Fisica</h1> <p></p><p></p><p></p>&nbsp &nbsp &nbsp | A física relaciona-se com a música através da frequência. Como já referimos no site o que define uma nota é a sua frequência, ou seja, cada nota têm uma frequência diferente uma da outra, e a frequência de uma nota é que lhe dá o seu som característico (A nota lá, por exemplo, corresponde a uma frequência de 440 Hz.).  Quanto maior for a frequência de uma nota mais aguda esta vai ser e quanto menor for a frequência mais grave esta vai ser.<p></p><p></p><p></p><p></p>&nbsp &nbsp &nbsp | Mas então o que é a frequência e como é que isso define um som? Bem a frequência é uma repetição com referência de tempo, ou seja, é algo que acontece de x em x tempo. Por exemplo, se uma roda de uma bicicleta der uma volta em 1 segundo então a sua frequência vai ser uma volta por segundo (ou um Htz). O som por sua vez é uma onda invisível que oscila(Contrai-se e descontrai-se de maneira a movimentar-se), assim se uma nota oscilar 5 vezes por segundo então ela vai ter uma frequência de 5Hz. Como o ouvido humano destingue os sons pelas suas oscilações, ou seja, pela sua frequência então a frequência de cada nota é o que lhe vai dar o seu som caracteristico.',
+
+	 	'	<h1>&nbsp &nbsp &nbsp |&nbsp Historia e cultura das artes </h1> <p></p>&nbsp;&nbsp; &nbsp;| Ao longo da história do homem, existiram várias épocas e culturas diferentes que tiveram controle na música. As épocas mais famosas, são, a época do clássico,  a época do romantismo, a época do estilo barroco e a época renascentista. No entanto, da mesma forma que existiram essas épocas e culturas diferentes, existiram muitas mais épocas/culturas com altíssima influência na música . Nomeadamente, a cultura egípcia e asiática, e a nossa época atual. Ao comparar as várias épocas, ainda que as suas bases sejam as mesmas, as diferenças são extremamente significativas.E, assim como referido anteriormente, existem muitas figuras importantes na história que estiveram fortemente ligadas à música. É praticamente cultura geral conhecer Beethoven e Mozart dos clássicos e barroco, ou conhecer Drake, hoje em dia.<p></p>  &nbsp &nbsp &nbsp |&nbsp Falando sobre Beethoven, um dos mais famosos músicos, que para além de pianista e compositor era surdo, o que dificultava em muito a sua vida, mas  que para além das suas dificuldades tornou-se  uma grande inspiração para vários músicos futuros . Um homem que, apesar de não ter o sentido que mais necessitamos, mostrou que é possível estar ligado à música e criar obras que jamais serão esquecidas.  Beethoven  tem também das mais importantes obras musicais, extremamente conhecidas, como a 5ª e 9ª  sinfonia, assim como a famosa Für Elize e a sua 14ª Sonata, mundialmente conhecida como “Moonlight Sonata”',
+
+	 	'&nbsp;&nbsp;|&nbsp; Da mesma forma, muitos outros compositores tiveram a sua influência neste mundo magnífico que é a música, como  Frédéric Chopin que levou o virtuosismo a outro nível, e Franz Liszt que para além de criar o poema sinfónico, deixou uma extensa quantidade de obras a serem estudadas, muitas delas consideradas extremamente difíceis, como a conhecida La Campanela e a Hungarian Rhapsody no.2.<p></p>&nbsp;&nbsp;|&nbsp; Mas nunca devemos esquecer aqueles que tinham grandes talentos e que passaram despercebidos por falta de recursos e/ou opressão. Para além disso, devemos sempre recordar as grandes figuras que se relacionam com a música. Leonardo da Vinci, por exemplo, foi alguém que, para além de se envolver com a música ao cantar e tocar, tendo este aprendido sem qualquer tipo de professor, também promoveu a música ao escrever ensaios e reflexões sobre música, além de projetar e construir protótipos de instrumentos musicais.  Outra pessoa bastante importante à música, foi Pitágoras, que será falado mais à frente.',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Matematica </h1> <p></p>&nbsp;&nbsp;|&nbsp;  A matemática relaciona-se com a música através de Pitágoras. Pitágoras foi um filósofo e matemático grego que entre as suas imensas descobertas descobriu como produzir notas musicais em instrumentos a partir da matemática. Pitágoras descobriu que se multiplicarmos a frequência de uma nota musical por 2 o som obtido será a mesma nota, porém de uma oitava acima (ou seja mais aguada).<p></p> &nbsp;&nbsp;|&nbsp; Pitágoras descobriu isso a partir de uma corda esticada, ele apercebeu-se que ao fazer a corda vibrar esta produzia um som e apercebeu-se também que ao dobrar a corda esta ia produzindo sons diferentes, ao dobrar as cordas várias vezes Pitágoras descobriu vários padrões, ele apercebeu-se que se dobrasse a corda em metade  o som obtido seria a mesma nota que a anterior, porém mais agudo e ao dobrá-la em 3 apercebeu-se que a nota obtida era diferente da inicial, porém esta soava bem juntamente com as anteriores. Assim, Pitágoras continuou a fazer divisões e criando combinações matemáticas originando assim as escalas musicais. Mais tarde Pitágoras também criaria instrumentos que pudessem reproduzir essas escalas.',
+
+	 	'<h1>&nbsp &nbsp &nbsp |&nbsp Literatura </h1> <p></p>&nbsp;&nbsp;|&nbsp; Não é fácil imaginar de que forma a literatura se pode comparar com a música. Apesar de ambas serem formas de entretenimento, são bastante distintas, o que pode resultar numa ideia de que ambas não se podem combinar.<p></p>&nbsp;&nbsp;|&nbsp; Mas claramente isso não é verdade! A obra mais importante de Pessoa (a famosa "Mensagem") inspirou diversos fados modernos, mesmo que sejam cantados centenas de anos depois, por exemplo, a bela música do grupo galego Milladoiro, “O Mar Português”.  Não esquecendo que à centenas de anos atrás os textos eram geralmente acompanhados por músicas. Um exemplo disso é a poesia trovadoresca ou até mesmo o teatro.<p></p>&nbsp;&nbsp;|&nbsp;Outro bom exemplo, são os momentos dos Salmos, nas missas católicas, e a ópera, São textos cantados, apenas com a voz humana, mas que representam a pura conexão entre a música e a literatura. Para além disso, se pensarmos bem, a música atual, que deixou os padrões de música apenas instrumental (época clássica) e passou a juntar a voz humana, é uma grande forma de conexão com a literatura, já que tudo o que é cantado com uma música de fundo é na verdade uma obra de literatura, com o seu significado e/ou mensagem ao ouvinte, que antes era compreendida apenas por outros músicos e especialistas, e agora se tornou muito mais fácil de se entender.',
+	 	'	<h1>&nbsp &nbsp &nbsp |&nbsp Piano</h1><p></p>&nbsp &nbsp &nbsp |&nbsp  Um piano é constituido por oito oitavas sendo as teclas brancas do piano  as notas basicas e as teclas pretas os sustenidos/bemois. Num piano as notas sobem da esquerda para a direita assim as notas são  mais graves nas oitavas mais a esquerda e mais agudas nas oitavas mais a direita. No piano o dó destingue-se das outras notas por ser a tecla antes de duas teclas pretas(nota a azul na imagem).'
+
+	 	
+
+	 ]
+	  
+var spans=document.getElementsByTagName('span');
+var spantext=[];
+
+var spantextuk=['1','2','3','4','5','Quiz','How to play','Relation With','Basics of music','Home','World of Music',' <i class="fa fa-circle" style="font-size: 14px;"></i> &nbsp &nbsp English','<i style="font-size: 14px;"></i> &nbsp &nbsp &nbsp &nbsp Português','<' , 'Topics','Musical Notes','Rhythmic times','Music sheets','Sharps and flats','Scales','<','Topics','Fisics','History','Mathematics','Literature','|What is the difference (in tons) between E and F?','|Half a ton.','| A quarter of a ton','| One ton.','| Two tons.','| What is an octave?','| A set of any 8 musical notes.','| A set of 8 consecutive musical notes.','| A set of musical notes between a C and another C.','|A set of 7 musical notes','|How many rhythmical times does a minim value?','| Half a rhythmical time.','|One rhythmical time.','|A quarter of a rhythmical time.','| Two rhythmical times.','|How many lines does a stave have?','|5 lines.','|4 lines.','|3 lines.','|6 lines.','|In the G clef:','| The first G is going to be in the first line counting from the top.','| The first G is going to be in last line counting from the top.','|The second C is going to be in the second space counting from the top.','| None of the previous answers.','| A sharp:','| Increases one ton.','| Decreases one ton.','|Decreases half a ton.','| Increases half a ton.','| What is the scale of E flat Major?','|E#, F, G, A#, B#, C, B, E#','| A♭, B♭, C, D♭, E♭, F, G, A♭','| E♭, F, G, A♭, B♭, C, D, E♭','|A#, B#, C, D#, E#, F, G, A#','| A piano has:','| 7 octaves e 2 pedals.','| 7 octaves e 3 pedals.','| 8 octaves e 3 pedals.','| 8 octaves e 2 pedals.', '| A guitar consists of:','| A neck and a body','| A neck and a head','| A body and a scale','| A body and a head','| How many strings does a classic bass have?','| 6 strings','| 5 strings','| 4 strings','| 7 strings','Correct','Reset']
+console.log(spantextuk.length)
+var spantextpt=['1','2','3','4','5','Quiz','Como tocar','Relações com','Basicos da musica','Inicio','World of Music','<i  style="font-size: 14px;"></i> &nbsp &nbsp English','<i class="fa fa-circle" style="font-size: 14px;"></i> &nbsp &nbsp Português','<' ,'Tópicos', 'Notas Musicais', 'Tempos Ritmicos','Leitura de Partituras','Sustenidos e Bemois','Escalas','<','Tópicos','Fisica','Historia','Matematica','literatura','| Qual é a diferença (em tons) entre mi e fá?','| Um meio de um tom.','| Um quarto de um tom.','| Um tom.','|  Dois tons.','|  O que é um oitava?','|  Um conjunto de quaisquer oito notas.','|  Um conjunto de oito notas seguidas.','| Um conjunto de notas entre um dó e outro dó.','|  Um conjunto de sete notas.','|  Quantos tempos rítmicos vale uma mínima?','|  Meio tempo.','|  Um tempo.','|  Um quarto de um tempo.','|  Dois tempos.','|  Por quantas linhas é constituída uma pauta?','|  Por 5 linhas.','|  Por 4 linhas.','|  Por 3 linhas.','|  Por 6 linhas.','|  Na clave de sol :','|  O  primeiro sol vai ser na primeira linha a contar de cima para baixo.','| O primeiro sol vai ser na ultima linha a contar de cima para baixo.','| O Segundo dó vai ser no segundo espaço a contar de cima para baixo.','| Nenhuma das anteriores.','| Um sustenido:','| Aumenta um tom.','| Diminui um tom.','| Diminui meio tom.','| Aumenta meio tom.','|Qual a escala de Mi Bemol Maior?','|Mi#, Fá, Sol, Lá#, Sí#, Dó, Ré, Mi#','| Lá♭, Si♭, Dó, Ré♭, Mi♭, Fá, Sol, Lá♭','| Mi♭, Fá, Sol, Lá♭, Sí♭, Dó, Ré, Mi♭','|Lá#, Si#, Dó, Ré#, Mi#, Fá, Sol, Lá#','| Um piano tem:','| 7 oitavas e 2 pedais.','| 7 oitavas e 3 pedais.','| 8 oitavas e 3 pedais.','| 8 oitavas e 2 pedais.','| Uma guitarra é constituída por:','| O braço e o corpo.','| O braço e a cabeça.','| O corpo e a escala.','| O corpo e a cabeça.','| Quantas cordas tem um baixo clássico?','| 6 cordas.','| 5 cordas.','| 4 cordas.','| 7 cordas.','Corrigir','Recomeçar']
+
+	 // var pag2t=pag2.offsetTop;
+
+</script>
+<div class="imgf">
+<img class="img3" src="imagens/transicao4.jpg">
+</div>
+<footer >
+	<div>
+		<span class="fimg">
+			<span style="border-right: 1px solid white;"><img src="imagens/sitestar.png"> </span>
+			<span><img src="imagens/logo2.jpg"style=""> </span>
+		</span>
+		<span class="footer-esquerda">
+			<span class="topicosf" >
+				<a href="about.html" target="blank" class="al" >Sobre nós</a>
+				<a href="rate.html" target="blank"class="al"> Avalie-nos</a>
+				<a href="https://youtu.be/aacb29hwPoo" target="blank"class="al"> Video</a>
+				<a href="Contact.html" target="blank"class="al"> Contate-nos</a>
+			</span>
+			<div class="al">Copyright 2021 <i class="	fa fa-copyright"></i> Toninhos todos os direitos reservados</div>
+			<div class="al">|&nbsp  Parcerias- <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a></div>
+		</span>
+	
+	</div>
+	<script type="text/javascript">
+		var al= document.getElementsByClassName('al')
+		var aluk=['About us','Rate us', 'Video','Contact us','Copyright 2021 <i class="	fa fa-copyright"></i> all rights reserved to Toninho`s','|&nbsp Partnerships- <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a>']
+		var alpt=['Sobre nós','Avalie-nos', 'Video',' Contate-nos','Copyright 2021 <i class="	fa fa-copyright"></i> Toninho`s todos os direitos reservados','|&nbsp Parcerias- <a href="https://m.facebook.com/906pt/?tsid=0.33778395359433233&source=result" target="blank">906.pt</a>']
+	</script>
+	
+</footer>
+
+</div>
+</div>
+</body>
+</html>
+
